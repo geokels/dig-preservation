@@ -10,9 +10,8 @@ keypoints:
 - "`git init` initializes a repository."
 ---
 
-Once Git is configured,
-we can start using it.
-Let's create a directory for our work and then move into that directory:
+Once Git is configured, we can start using it.  Let's create a
+directory for our work and then move into that directory:
 
 ~~~
 $ mkdir planets
@@ -20,24 +19,25 @@ $ cd planets
 ~~~
 {: .bash}
 
-Then we tell Git to make `planets` a [repository]({{ page.root }}/reference/#repository)—a place where
-Git can store versions of our files:
+Then we tell Git to make `planets` a [repository]({{ page.root
+}}/reference/#repository)—a place where Git can store versions of our
+files:
 
 ~~~
 $ git init
 ~~~
 {: .bash}
 
-If we use `ls` to show the directory's contents,
-it appears that nothing has changed:
+If we use `ls` to show the directory's contents, it appears that
+nothing has changed:
 
 ~~~
 $ ls
 ~~~
 {: .bash}
 
-But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `planets` called `.git`:
+But if we add the `-a` flag to show everything, we can see that Git
+has created a hidden directory within `planets` called `.git`:
 
 ~~~
 $ ls -a
@@ -49,12 +49,12 @@ $ ls -a
 ~~~
 {: .output}
 
-Git stores information about the project in this special sub-directory.
-If we ever delete it,
-we will lose the project's history.
+Git stores information about the project in this special
+sub-directory.  If we ever delete it, we will lose the project's
+history.
 
-We can check that everything is set up correctly
-by asking Git to tell us the status of our project:
+We can check that everything is set up correctly by asking Git to tell
+us the status of our project:
 
 ~~~
 $ git status
@@ -72,9 +72,9 @@ nothing to commit (create/copy files and use "git add" to track)
 
 > ## Places to Create Git Repositories
 >
-> Dracula starts a new project, `moons`, related to his `planets` project.
-> Despite Wolfman's concerns, he enters the following sequence of commands to
-> create one Git repository inside another:
+> Dracula starts a new project, `moons`, related to his `planets`
+> project.  Despite Wolfman's concerns, he enters the following
+> sequence of commands to create one Git repository inside another:
 >
 > ~~~
 > $ cd             # return to home directory
@@ -87,17 +87,19 @@ nothing to commit (create/copy files and use "git add" to track)
 > ~~~
 > {: .bash}
 >
-> Why is it a bad idea to do this? (Notice here that the `planets` project is now also tracking the entire `moons` repository.)
+> Why is it a bad idea to do this? (Notice here that the `planets`
+> project is now also tracking the entire `moons` repository.)
+>
 > How can Dracula undo his last `git init`?
 >
 > > ## Solution
 > >
 > > Git repositories can interfere with each other if they are "nested" in the
-> > directory of another: the outer repository will try to version-control 
+> > directory of another: the outer repository will try to version-control
 > > the inner repository. Therefore, it's best to create each new Git
 > > repository in a separate directory. To be sure that there is no conflicting
 > > repository in the directory, check the output of `git status`. If it looks
-> > like the following, you are good to go to create a new repository as shown 
+> > like the following, you are good to go to create a new repository as shown
 > > above:
 > >
 > > ~~~
