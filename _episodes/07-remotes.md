@@ -1,5 +1,5 @@
 ---
-title: Remotes in GitHub
+title: Remotes
 teaching: 30
 exercises: 0
 questions:
