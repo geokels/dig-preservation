@@ -14,12 +14,12 @@ Once Git is configured, we can start using it.  Let's create a
 directory for our work and then move into that directory:
 
 ~~~
-$ mkdir planets
-$ cd planets
+$ mkdir metadata
+$ cd metadata
 ~~~
 {: .bash}
 
-Then we tell Git to make `planets` a [repository]({{ page.root
+Then we tell Git to make `metadata` a [repository]({{ page.root
 }}/reference/#repository)—a place where Git can store versions of our
 files:
 
@@ -37,7 +37,7 @@ $ ls
 {: .bash}
 
 But if we add the `-a` flag to show everything, we can see that Git
-has created a hidden directory within `planets` called `.git`:
+has created a hidden directory within `metadata` called `.git`:
 
 ~~~
 $ ls -a
@@ -72,25 +72,25 @@ nothing to commit (create/copy files and use "git add" to track)
 
 > ## Places to Create Git Repositories
 >
-> Catsy starts a new project, `moons`, related to her `planets`
-> project.  Despite Luke's concerns, she enters the following
-> sequence of commands to create one Git repository inside another:
+> You start a new project, `csv`, related to the `metadata` project.
+> You enter the following sequence of commands to create one Git
+> repository inside another:
 >
 > ~~~
 > $ cd             # return to home directory
-> $ mkdir planets  # make a new directory planets
-> $ cd planets     # go into planets
-> $ git init       # make the planets directory a Git repository
-> $ mkdir moons    # make a sub-directory planets/moons
-> $ cd moons       # go into planets/moons
-> $ git init       # make the moons sub-directory a Git repository
+> $ mkdir metadata # make a new directory ’metadata’
+> $ cd metadata    # go into ’metadata’
+> $ git init       # make the ’metadata’ directory a Git repository
+> $ mkdir csv      # make a sub-directory metadata/csv
+> $ cd csv         # go into metadata/csv
+> $ git init       # make the csv sub-directory a Git repository
 > ~~~
 > {: .bash}
 >
-> Why is it a bad idea to do this? (Notice here that the `planets`
-> project is now also tracking the entire `moons` repository.)
+> Why is it a bad idea to do this? (Notice here that the `metadata`
+> project is now also tracking the entire `csv` repository.)
 >
-> How can Catsy undo her last `git init`?
+> How can you undo your last `git init`?
 >
 > > ## Solution
 > >
@@ -114,33 +114,33 @@ nothing to commit (create/copy files and use "git add" to track)
 > > Note that we can track files in directories within a Git:
 > >
 > > ~~~
-> > $ touch moon phobos deimos titan    # create moon files
+> > $ touch good.csv bad.csv            # create files
 > > $ cd ..                             # return to planets directory
-> > $ ls moons                          # list contents of the moons directory
-> > $ git add moons/*                   # add all contents of planets/moons
-> > $ git status                        # show moons files in staging area
-> > $ git commit -m "add moon files"    # commit planets/moons to planets Git repository
+> > $ ls csv                            # list contents of the csv directory
+> > $ git add csv/*                     # add all contents of metadata/csv
+> > $ git status                        # show files in staging area
+> > $ git commit -m "add big files"     # commit metadata/csv to planets Git repository
 > > ~~~
 > > {: .bash}
 > >
-> > Similarly, we can ignore (as discussed later) entire directories, such as the `moons` directory:
+> > Similarly, we can ignore entire directories, such as the `csv` directory:
 > >
 > > ~~~
-> > $ nano .gitignore # open the .gitignore file in the texteditor to add the moons directory
+> > $ nano .gitignore # open the .gitignore file in the texteditor to add the csv directory
 > > $ cat .gitignore # if you run cat afterwards, it should look like this:
 > > ~~~
 > > {: .bash}
 > >
 > > ~~~
-> > moons
+> > /csv
 > > ~~~
 > > {: .output}
 > >
-> > To recover from this little mistake, Catsy can just remove the `.git`
-> > folder in the moons subdirectory. To do so she can run the following command from inside the 'moons' directory:
+> > To recover from this little mistake, you can just remove the `.git`
+> > folder in the ’csv’ subdirectory. To do so, run the following command from inside the 'csv’ directory:
 > >
 > > ~~~
-> > $ rm -rf moons/.git
+> > $ rm -rf csv/.git
 > > ~~~
 > > {: .bash}
 > >
