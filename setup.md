@@ -10,7 +10,7 @@ for instructions on installing Git.
 First we'll download our sample data that we will be working with in the class:
 
 1. Open your browser
-2. Paste in the following link and hit Enter/Return: https://github.com/ucsdlib/cats-as-data/archive/master.zip
+2. Paste in the following link and hit Enter/Return: <https://github.com/ucsdlib/cats-as-data/archive/master.zip>
 3. Navigate to the downloaded zip file. Most likely, it is in your Downloads folder.
 4. Move the zip file to your Desktop (drag and drop should work).
 5. Extract the contents of the zip file. This can usually be done by right-clicking on the file and clicking the "Extract
