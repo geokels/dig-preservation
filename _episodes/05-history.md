@@ -97,7 +97,7 @@ $ git show HEAD~2 mars.txt
 
 ~~~
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Catsy Cline <ccline@pawson.edu>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Add concerns about effects of Mars' moons on Wolfman
