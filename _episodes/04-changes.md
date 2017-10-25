@@ -181,7 +181,7 @@ $ git log
 
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Catsy Cline <ccline@pawson.edu>
 Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on Mars as a base
@@ -206,7 +206,7 @@ and the log message Git was given when the commit was created.
 > (and so that we can't accidentally edit or delete an old version).
 {: .callout}
 
-Now suppose Dracula adds more information to the file.
+Now suppose Catsy adds more information to the file.
 (Again, we'll edit with `nano` and then `cat` the file to show its contents;
 you may use a different editor, and don't need to `cat`.)
 
@@ -471,19 +471,19 @@ $ git log
 
 ~~~
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Catsy Cline <ccline@pawson.edu>
 Date:   Thu Aug 22 10:14:07 2013 -0400
 
     Discuss concerns about Mars' climate for Mummy
 
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Catsy Cline <ccline@pawson.edu>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Add concerns about effects of Mars' moons on Wolfman
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Catsy Cline <ccline@pawson.edu>
 Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on Mars as a base
@@ -525,7 +525,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >
 > ~~~
 > commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-> Author: Vlad Dracula <vlad@tran.sylvan.ia>
+> Author: Catsy Cline <ccline@pawson.edu>
 > Date:   Thu Aug 22 10:14:07 2013 -0400
 >
 >    Discuss concerns about Mars' climate for Mummy
@@ -716,7 +716,7 @@ repository (`git commit`):
 > When commiting you can name someone else as the author:
 >
 > ~~~
-> $ git commit --author="Vlad Dracula <vlad@tran.sylvan.ia>"
+> $ git commit --author="Catsy Cline <ccline@pawson.edu>"
 > ~~~
 > {: .bash}
 >
@@ -740,13 +740,13 @@ repository (`git commit`):
 > > $ git log --format=full
 > > commit 4162a51b273ba799a9d395dd70c45d96dba4e2ff
 > > Author: Frank N. Stein <franky@monster.com>
-> > Commit: Vlad Dracula <vlad@tran.sylvan.ia>
+> > Commit: Catsy Cline <ccline@pawson.edu>
 > >
 > > Update Vlad's bio.
 > >
 > > commit aaa3271e5e26f75f11892718e83a3e2743fab8ea
-> > Author: Vlad Dracula <vlad@tran.sylvan.ia>
-> > Commit: Vlad Dracula <vlad@tran.sylvan.ia>
+> > Author: Catsy Cline <ccline@pawson.edu>
+> > Commit: Catsy Cline <ccline@pawson.edu>
 > >
 > > Vlad's initial bio.
 > > ~~~
