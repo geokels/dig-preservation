@@ -22,16 +22,16 @@ of configurations we will set as we get started with Git:
 
 On a command line, Git commands are written as `git verb`,
 where `verb` is what we actually want to do. So here is how
-Dracula sets up his new laptop:
+Catsy sets up her new laptop:
 
 ~~~
-$ git config --global user.name "Vlad Dracula"
-$ git config --global user.email "vlad@tran.sylvan.ia"
+$ git config --global user.name "Catsy Cline"
+$ git config --global user.email "ccline@pawson.edu"
 $ git config --global color.ui "auto"
 ~~~
 {: .bash}
 
-Please use your own name and email address instead of Dracula's. This
+Please use your own name and email address instead of Catsy's. This
 user name and email will be associated with your subsequent Git
 activity, which means that any changes pushed to
 [GitHub](http://github.com/), [BitBucket](http://bitbucket.org/),
@@ -48,7 +48,7 @@ for the `user.email` value, e.g. `username@users.noreply.github.com`
 replacing `username` with your GitHub one. You can change the email
 address later on by using the `git config` command again.
 
-Dracula also has to set his favorite text editor, following this table:
+Catsy also has to set her favorite text editor, following this table:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
