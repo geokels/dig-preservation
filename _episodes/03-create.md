@@ -72,7 +72,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 > ## Places to Create Git Repositories
 >
-> Dracula starts a new project, `moons`, related to his `planets`
+> Catsy starts a new project, `moons`, related to her `planets`
 > project.  Despite Wolfman's concerns, he enters the following
 > sequence of commands to create one Git repository inside another:
 >
@@ -90,7 +90,7 @@ nothing to commit (create/copy files and use "git add" to track)
 > Why is it a bad idea to do this? (Notice here that the `planets`
 > project is now also tracking the entire `moons` repository.)
 >
-> How can Dracula undo his last `git init`?
+> How can Catsy undo her last `git init`?
 >
 > > ## Solution
 > >
@@ -136,7 +136,7 @@ nothing to commit (create/copy files and use "git add" to track)
 > > ~~~
 > > {: .output}
 > >
-> > To recover from this little mistake, Dracula can just remove the `.git`
+> > To recover from this little mistake, Catsy can just remove the `.git`
 > > folder in the moons subdirectory. To do so he can run the following command from inside the 'moons' directory:
 > >
 > > ~~~
