@@ -292,6 +292,7 @@ between two files, it’s called (unsurprisingly) a diff.
 After reviewing our change, it's time to commit it:
 
 ~~~
+$ git add README.md
 $ git commit -m "readme: where are the files?"
 ~~~
 {: .bash}
