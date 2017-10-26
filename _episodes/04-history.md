@@ -20,95 +20,93 @@ As we saw in the previous lesson, we can refer to commits by their
 identifiers.  You can refer to the _most recent commit_ of the working
 directory by using the identifier `HEAD`.
 
-We've been adding one line at a time to `mars.txt`, so it's easy to track our
+We've been adding one line at a time to `README.md`, so it's easy to track our
 progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make a change to `mars.txt`.
+let's make another change to `README.md`.
 
 ~~~
-$ nano mars.txt
-$ cat mars.txt
+$ nano README.md
+$ cat README.md
 ~~~
 {: .bash}
 
 ~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-An ill-considered change
+# about your new image collection
+
+The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
+
+Image credits:
+- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+
+The images are in the `images/` subdirectory of this repository.
+If you would like, you can also put images of dogs and hexagonal software logos here.
+
 ~~~
 {: .output}
 
-Now, let's see what we get.
+The real goodness in all this is when you can refer to previous commits.
+We do that by adding `~1` to refer to the commit one before `HEAD`.
 
 ~~~
-$ git diff HEAD mars.txt
-~~~
-{: .bash}
-
-~~~
-diff --git a/mars.txt b/mars.txt
-index b36abfd..0848c8d 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1,3 +1,4 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
- But the Mummy will appreciate the lack of humidity
-+An ill-considered change.
-~~~
-{: .output}
-
-which is the same as what you would get if you leave out `HEAD` (try it).  The
-real goodness in all this is when you can refer to previous commits.  We do
-that by adding `~1` to refer to the commit one before `HEAD`.
-
-~~~
-$ git diff HEAD~1 mars.txt
+$ git diff HEAD~1 README.md
 ~~~
 {: .bash}
 
 If we want to see the differences between older commits we can use `git diff`
 again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
 
-
 ~~~
-$ git diff HEAD~2 mars.txt
+$ git diff HEAD~2 README.md
 ~~~
 {: .bash}
 
 ~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,3 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
+diff --git a/README.md b/README.md
+index acbad52..0e44dff 100644
+--- a/README.md
++++ b/README.md
+@@ -6,3 +6,6 @@ Image credits:
+ - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+ - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+ - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
++
++The images are in the `images/` subdirectory of this repository.
++If you would like, you can also put pictures of dogs and hexagonal software logos here.
+
 ~~~
 {: .output}
 
 We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
 
 ~~~
-$ git show HEAD~2 mars.txt
+$ git show HEAD~2 README.md
 ~~~
 {: .bash}
 
 ~~~
-commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Aug 22 10:07:21 2013 -0400
+commit 1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3
+Author: Catsy Cline <ccline@pawston.edu>
+Date:   Thu Oct 26 09:54:31 2017 -0700
 
-    Add concerns about effects of Mars' moons on Wolfman
+    add notes on metadata
 
-diff --git a/mars.txt b/mars.txt
-index df0654a..315bf3a 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,2 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..acbad52
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,8 @@
++# about your new image collection
++
++The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
++
++Image credits:
++- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
++- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
++- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+
 ~~~
 {: .output}
 
@@ -123,28 +121,27 @@ while `HEAD~123` goes back 123 commits from where we are now.
 We can also refer to commits using
 those long strings of digits and letters
 that `git log` displays.
-These are unique IDs for the changes,
-and "unique" really does mean unique:
-every change to any set of files on any computer
-has a unique 40-character identifier.
 Our first commit was given the ID
-`f22b25e3233b4645dabd0d81e651fe074bd8e73b`,
+`1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3`,
 so let's try this:
 
 ~~~
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
+$ git diff 1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3 README.md
 ~~~
 {: .bash}
 
 ~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,3 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
+diff --git a/README.md b/README.md
+index acbad52..0e44dff 100644
+--- a/README.md
++++ b/README.md
+@@ -6,3 +6,6 @@ Image credits:
+ - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+ - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+ - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
++
++The images are in the `images/` subdirectory of this repository.
++If you would like, you can also put pictures of dogs and hexagonal software logos here.
 ~~~
 {: .output}
 
@@ -153,19 +150,22 @@ but typing out random 40-character strings is annoying,
 so Git lets us use just the first few characters:
 
 ~~~
-$ git diff f22b25e mars.txt
+$ git diff 1ecad50 README.md
 ~~~
 {: .bash}
 
 ~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,3 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
+diff --git a/README.md b/README.md
+index acbad52..0e44dff 100644
+--- a/README.md
++++ b/README.md
+@@ -6,3 +6,6 @@ Image credits:
+ - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+ - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+ - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
++
++The images are in the `images/` subdirectory of this repository.
++If you would like, you can also put pictures of dogs and hexagonal software logos here.
 ~~~
 {: .output}
 
@@ -175,13 +175,13 @@ can we restore older versions of things?
 Let's suppose we accidentally overwrite our file:
 
 ~~~
-$ nano mars.txt
-$ cat mars.txt
+$ nano README.md
+$ cat README.md
 ~~~
 {: .bash}
 
 ~~~
-We will need to manufacture our own oxygen
+Dogs and hexagonal software logos as data.
 ~~~
 {: .output}
 
@@ -199,7 +199,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   mars.txt
+	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
@@ -209,15 +209,22 @@ We can put things back the way they were
 by using `git checkout`:
 
 ~~~
-$ git checkout HEAD mars.txt
-$ cat mars.txt
+$ git checkout HEAD README.md
+$ cat README.md
 ~~~
 {: .bash}
 
 ~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
+# about your new image collection
+
+The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
+
+Image credits:
+- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+
+The images are in the `images/` subdirectory of this repository.
 ~~~
 {: .output}
 
@@ -230,17 +237,27 @@ If we want to go back even further,
 we can use a commit identifier instead:
 
 ~~~
-$ git checkout f22b25e mars.txt
+$ git checkout 6b5b051 README.md
 ~~~
 {: .bash}
 
 ~~~
-$ cat mars.txt
+$ cat README.md
 ~~~
 {: .bash}
 
 ~~~
-Cold and dry, but everything is my favorite color
+# about your new image collection
+
+The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
+
+Image credits:
+- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
+- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
+- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+
+The images are in the `images/` subdirectory of this repository.
+
 ~~~
 {: .output}
 
@@ -250,25 +267,21 @@ $ git status
 {: .bash}
 
 ~~~
-# On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   mars.txt
-#
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	cats-human-situations.csv
+
+nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 {: .output}
 
-Notice that the changes are on the staged area.
 Again, we can put things back the way they were
 by using `git checkout`:
 
 ~~~
-$ git checkout -f master mars.txt
+$ git checkout -f master README.md
 ~~~
 {: .bash}
 
@@ -277,12 +290,12 @@ $ git checkout -f master mars.txt
 > Above we used
 >
 > ~~~
-> $ git checkout f22b25e mars.txt
+> $ git checkout 6b5b051 README.md
 > ~~~
 > {: .bash}
 >
-> to revert `mars.txt` to its state after the commit `f22b25e`.
-> If you forget `mars.txt` in that command, Git will tell you that "You are in
+> to revert `README.md` to its state after the commit `6b5b051`.
+> If you forget `README.md` in that command, Git will tell you that "You are in
 > 'detached HEAD' state." In this state, you shouldn't make any changes.
 > You can fix this by reattaching your head using ``git checkout master``
 {: .callout}
@@ -375,45 +388,45 @@ moving backward and forward in time becomes much easier.
 
 > ## Understanding Workflow and History
 >
-> What is the output of cat venus.txt at the end of this set of commands?
+> What is the output of cat CONTRIBUTING.md at the end of this set of commands?
 >
 > ~~~
-> $ cd planets
-> $ nano venus.txt #input the following text: Venus is beautiful and full of love
-> $ git add venus.txt
-> $ nano venus.txt #add the following text: Venus is too hot to be suitable as a base
-> $ git commit -m "Comment on Venus as an unsuitable base"
-> $ git checkout HEAD venus.txt
-> $ cat venus.txt #this will print the contents of venus.txt to the screen
+> $ cd cats-as-metadata-master
+> $ nano CONTRIBUTING.md #input the following text: Please submit changes in a Pull Request
+> $ git add CONTRIBUTING.md
+> $ nano CONTRIBUTING.md #add the following text: Don't forget cat images, please.
+> $ git commit -m "Add CONTRIBUTING.md to project"
+> $ git checkout HEAD CONTRIBUTING.md
+> $ cat CONTRIBUTING.md #this will print the contents of CONTRIBUTING.md to the screen
 > ~~~
 > {: .bash}
 >
 > 1.
 >
 > ~~~
-> Venus is too hot to be suitable as a base
+> Please submit changes in a Pull Request
 > ~~~
 > {: .output}
 >
 > 2.
 >
 > ~~~
-> Venus is beautiful and full of love
+> Don't forget cat images, please.
 > ~~~
 > {: .output}
 >
 > 3.
 >
 > ~~~
-> Venus is beautiful and full of love
-> Venus is too hot to be suitable as a base
+> Please submit changes in a Pull Request
+> Don't forget cat images, please.
 > ~~~
 > {: .output}
 >
 > 4.
 >
 > ~~~
-> Error because you have changed venus.txt without committing the changes
+> Error because you have changed CONTRIBUTING.md without committing the changes
 > ~~~
 > {: .output}
 >
@@ -421,56 +434,56 @@ moving backward and forward in time becomes much easier.
 > >
 > > Line by line:
 > > ~~~
-> > $ cd planets
+> > $ cd cats-as-metadata-master
 > > ~~~
 > > {: .bash}
-> > Enters into the 'planets' directory
+> > Enters into the 'cats-as-metadata-master' directory
 > >
 > > ~~~
-> > $ nano venus.txt #input the following text: Venus is beautiful and full of love
+> > $ nano CONTRIBUTING.md #input the following text: Please submit changes in a Pull Request
 > > ~~~
 > > {: .bash}
 > > We created a new file and wrote a sentence in it, but the file is not tracked by git.  
 > >
 > > ~~~
-> > $ git add venus.txt
+> > $ git add CONTRIBUTING.md
 > > ~~~
 > > {: .bash}
 > > Now the file is staged. The changes that have been made to the file until now will be committed in the next commit.
 > >
 > > ~~~
-> > $ nano venus.txt #add the following text: Venus is too hot to be suitable as a base
+> > $ nano CONTRIBUTING.md #add the following text: Don't forget cat images, please.
 > > ~~~
 > > {: .bash}
 > > The file has been modified. The new changes are not staged because we have not added the file.
 > >
 > > ~~~
-> > $ git commit -m "Comment on Venus as an unsuitable base"
+> > $ git commit -m "Add CONTRIBUTING.md to project"
 > > ~~~
 > > {: .bash}
-> > The changes that were staged (Venus is beautiful and full of love) have been committed. The changes that were not staged (Venus is too hot to be suitable as a base) have not. Our local working copy is different than the copy in our local repository.
+> > The changes that were staged (Please submit changes in a Pull Request) have been committed. The changes that were not staged (Don't forget cat images, please.) have not. Our local working copy is different than the copy in our local repository.
 > >
 > > ~~~
-> > $ git checkout HEAD venus.txt
+> > $ git checkout HEAD CONTRIBUTING.md
 > > ~~~
 > > {: .bash}
 > > With checkout we discard the changes in the working directory so that our local copy is exactly the same as our HEAD, the most recent commit.
 > >
 > > ~~~
-> > $ cat venus.txt #this will print the contents of venus.txt to the screen
+> > $ cat CONTRIBUTING.md #this will print the contents of CONTRIBUTING.md to the screen
 > > ~~~
 > > {: .bash}
-> > If we print venus.txt we will get answer 2.
+> > If we print CONTRIBUTING.md we will get answer 2.
 > >
 > {: .solution}
 {: .challenge}
 
 > ## Checking Understanding of `git diff`
 >
-> Consider this command: `git diff HEAD~3 mars.txt`. What do you predict this command
+> Consider this command: `git diff HEAD~3 README.md`. What do you predict this command
 > will do if you execute it? What happens when you do execute it? Why?
 >
-> Try another command, `git diff [ID] mars.txt`, where [ID] is replaced with
+> Try another command, `git diff [ID] README.md`, where [ID] is replaced with
 > the unique identifier for your most recent commit. What do you think will happen,
 > and what does happen?
 {: .challenge}
@@ -479,7 +492,7 @@ moving backward and forward in time becomes much easier.
 >
 > `git checkout` can be used to restore a previous commit when unstaged changes have
 > been made, but will it also work for changes that have been staged but not committed?
-> Make a change to `mars.txt`, add that change, and use `git checkout` to see if
+> Make a change to `README.md`, add that change, and use `git checkout` to see if
 > you can remove your change.
 {: .challenge}
 
@@ -488,16 +501,16 @@ moving backward and forward in time becomes much easier.
 > Exploring history is an important part of git, often it is a challenge to find
 > the right commit ID, especially if the commit is from several months ago.
 >
-> Imagine the `planets` project has more than 50 files.
-> You would like to find a commit with specific text in `mars.txt` is modified.
+> Imagine the `cats-as-metadata` project has more than 50 files.
+> You would like to find a commit with specific text in `README.md` is modified.
 > When you type `git log`, a very long list appeared,
 > How can you narrow down the search?
 >
-> Recorded that the `git diff` command allow us to explore one specific file,
-> e.g. `git diff mars.txt`. We can apply the similar idea here.
+> Recall that the `git diff` command allow us to explore one specific file,
+> e.g. `git diff README.md`. We can apply the similar idea here.
 >
 > ~~~
-> $ git log mars.txt
+> $ git log README.md
 > ~~~
 > {: .bash}
 >
@@ -508,7 +521,7 @@ moving backward and forward in time becomes much easier.
 > Is that possible to combine both? Let's try the following:
 >
 > ~~~
-> $ git log --patch mars.txt
+> $ git log --patch README.md
 > ~~~
 > {: .bash}
 >
@@ -517,7 +530,7 @@ moving backward and forward in time becomes much easier.
 > Question: What does the following command do?
 >
 > ~~~
-> $ git log --patch HEAD~3 *.txt
+> $ git log --patch HEAD~3 *.md
 > ~~~
 > {: .bash}
 {: .challenge}
