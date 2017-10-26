@@ -90,6 +90,23 @@ You can change your configuration as many times as you want: just use
 the same commands to choose another editor or update your email
 address.
 
+> ## Line Endings
+>
+> Finally we need to configure how git will handle line endings in our files.
+>
+> If you are on a Windows machine, type in the following:
+> ~~~
+> $ git config --global core.autocrlf true
+> ~~~
+> {: .bash}
+>
+> If you are on a Mac OS/Linux machine, type in the following:
+> ~~~
+> $ git config --global core.autocrlf input
+> ~~~
+> {: .bash}
+{: .callout}
+
 > ## Proxy
 >
 > In some networks you need to use a
