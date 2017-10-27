@@ -25,85 +25,29 @@ services like [GitHub](http://github.com), [BitBucket](http://bitbucket.org) or
 [GitLab](http://gitlab.com/) to hold those master copies; we'll explore the pros
 and cons of this in the final section of this lesson.
 
-Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
-create a new repository called `planets`:
-
-![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
-
-Name your repository "planets" and then click "Create Repository":
-
-![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
-
-As soon as the repository is created, GitHub displays a page with a URL and some
-information on how to configure your local repository:
-
-![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
-
-This effectively does the following on GitHub's servers:
-
-~~~
-$ mkdir planets
-$ cd planets
-$ git init
-~~~
-{: .bash}
-
-Our local repository still contains our earlier work on `mars.txt`, but the
-remote repository on GitHub doesn't contain any files yet:
-
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
-
-The next step is to connect the two repositories.  We do this by making the
-GitHub repository a [remote]({{ page.root }}/reference/#remote) for the local repository.
-The home page of the repository on GitHub includes the string we need to
-identify it:
-
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
-
-Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
-SSH to HTTPS.
-
-> ## HTTPS vs. SSH
+> ## GitHub References
 >
-> We use HTTPS here because it does not require additional configuration.  After
-> the workshop you may want to set up SSH access, which is a bit more secure, by
-> following one of the great tutorials from
-> [GitHub](https://help.github.com/articles/generating-ssh-keys),
-> [Atlassian/BitBucket](https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git)
-> and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
-> (this one has a screencast).
+> Below are a list of references you may want to review the next time you create a new repository on Github.
+>
+> * https://help.github.com/articles/create-a-repo/
+> * https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 {: .callout}
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
+Let's start by sharing the changes we've made to our current project with the
+world. We're going to all log into Github together and walk through the following steps to create a repository:
 
-Copy that URL from the browser, go into the local `planets` repository, and run
-this command:
-
-~~~
-$ git remote add origin https://github.com/vlad/planets.git
-~~~
-{: .bash}
-
-Make sure to use the URL for your repository rather than Vlad's: the only
-difference should be your username instead of `vlad`.
-
-We can check that the command has worked by running `git remote -v`:
+1. Log in to Github
+2. Create a repository
+3. Copy the HTTPS URL of the repository
+4. Add the repository as the `origin` remote
 
 ~~~
+$ git remote add origin https://github.com/your-username/cats-as-data.git
 $ git remote -v
 ~~~
 {: .bash}
 
-~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
-~~~
-{: .output}
-
-The name `origin` is a local nickname for your remote repository. We could use
-something else if we wanted to, but `origin` is by far the most common choice.
-
+5. Push our local repository content to our Github repository
 Once the nickname `origin` is set up, this command will push the changes from
 our local repository to the repository on GitHub:
 
@@ -112,77 +56,7 @@ $ git push origin master
 ~~~
 {: .bash}
 
-~~~
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (9/9), 821 bytes, done.
-Total 9 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-~~~
-{: .output}
-
-> ## Proxy
->
-> If the network you are connected to uses a proxy there is a chance that your
-> last command failed with "Could not resolve hostname" as the error message. To
-> solve this issue you need to tell Git about the proxy:
->
-> ~~~
-> $ git config --global http.proxy http://user:password@proxy.url
-> $ git config --global https.proxy http://user:password@proxy.url
-> ~~~
-> {: .bash}
->
-> When you connect to another network that doesn't use a proxy you will need to
-> tell Git to disable the proxy using:
->
-> ~~~
-> $ git config --global --unset http.proxy
-> $ git config --global --unset https.proxy
-> ~~~
-> {: .bash}
-{: .callout}
-
-> ## Password Managers
->
-> If your operating system has a password manager configured, `git push` will
-> try to use it when it needs your username and password.  For example, this
-> is the default behavior for Git Bash on Windows. If you want to type your
-> username and password at the terminal instead of using a password manager,
-> type:
->
-> ~~~
-> $ unset SSH_ASKPASS
-> ~~~
-> {: .bash}
->
-> in the terminal, before you run `git push`.  Despite the name, [git uses
-> `SSH_ASKPASS` for all credential
-> entry](http://git-scm.com/docs/gitcredentials#_requesting_credentials), so
-> you may want to unset `SSH_ASKPASS` whether you are using git via SSH or
-> https.
->
-> You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
-> to make git default to using the terminal for usernames and passwords.
-{: .callout}
-
-Our local and remote repositories are now in this state:
-
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
-
-> ## The '-u' Flag
->
-> You may see a `-u` option used with `git push` in some documentation.  This
-> option is synonymous with the `--set-upstream-to` option for the `git branch`
-> command, and is used to associate the current branch with a remote branch so
-> that the `git pull` command can be used without any arguments. To do this,
-> simply use `git push -u origin master` once the remote has been set up.
-{: .callout}
-
-We can pull changes from the remote repository to the local one as well:
+6. Pull changes from our Github repository to our local repository
 
 ~~~
 $ git pull origin master
@@ -190,7 +64,7 @@ $ git pull origin master
 {: .bash}
 
 ~~~
-From https://github.com/vlad/planets
+From https://github.com/ccline/cats-as-data
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
@@ -200,9 +74,10 @@ Pulling has no effect in this case because the two repositories are already
 synchronized.  If someone else had pushed some changes to the repository on
 GitHub, though, this command would download them to our local repository.
 
+
 > ## GitHub GUI
 >
-> Browse to your `planets` repository on GitHub.
+> Browse to your `cats-as-data` repository on GitHub.
 > Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
 > Hover over, and click on, the three buttons to the right of each commit.
 > What information can you gather/explore from these buttons?
