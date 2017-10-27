@@ -140,22 +140,8 @@ characters) summary of changes made in the commit.  If you want to go
 into more detail, add a blank line between the summary line and your
 additional notes.
 
-If we run `git status` now:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-nothing to commit, working directory clean
-~~~
-{: .output}
-
-it tells us everything is up to date.  If we want to know what we've
-done recently, we can ask Git to show us the project's history using
-`git log`:
+If we want to know what we've done recently, we can ask Git to show us the
+project's history using `git log`:
 
 ~~~
 $ git log
