@@ -27,16 +27,16 @@ and cons of this in the final section of this lesson.
 
 > ## GitHub References
 >
-> Below are a list of references you may want to review the next time you create a new repository on Github.
+> Below are a list of references you may want to review the next time you create a new repository on GitHub.
 >
-> * https://help.github.com/articles/create-a-repo/
-> * https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+> * [Create A Repo](https://help.github.com/articles/create-a-repo/)
+> * [Adding an existing project to GitHub using the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 {: .callout}
 
 Let's start by sharing the changes we've made to our current project with the
-world. We're going to all log into Github together and walk through the following steps to create a repository:
+world. We're going to all log into GitHub together and walk through the following steps to create a repository:
 
-1. Log in to Github
+1. Log in to GitHub
 2. Create a repository
 3. Copy the HTTPS URL of the repository
 4. Add the repository as the `origin` remote
@@ -47,7 +47,7 @@ $ git remote -v
 ~~~
 {: .bash}
 
-5. Push our local repository content to our Github repository
+5. Push our local repository content to our GitHub repository
 Once the nickname `origin` is set up, this command will push the changes from
 our local repository to the repository on GitHub:
 
@@ -56,7 +56,7 @@ $ git push origin master
 ~~~
 {: .bash}
 
-6. Pull changes from our Github repository to our local repository
+6. Pull changes from our GitHub repository to our local repository
 
 ~~~
 $ git pull origin master
@@ -101,7 +101,7 @@ GitHub, though, this command would download them to our local repository.
 > times, and why?
 >
 > > ## Solution
-> > Github displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
+> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
 > {: .solution}
 {: .challenge}
 
