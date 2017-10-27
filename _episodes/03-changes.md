@@ -503,11 +503,11 @@ repository (`git commit`):
 > > {: .bash}
 > > Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
 > > ~~~
-> > $ git commit -m "i forgot about adding the metadata!"
+> > $ git commit -m "i forgot about adding the metadata"
 > > ~~~
 > > {: .bash}
 > > ~~~
-> > [master 5988bdc] i forgot to add the metadata!
+> > [master 5988bdc] i forgot to add the metadata
 > >  2 files changed, 5 insertions(+), 1 deletion(-)
 > >  create mode 100644 cats-human-situations.csv
 > > ~~~
