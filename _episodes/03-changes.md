@@ -21,12 +21,12 @@ keypoints:
 - "Always write a log message when committing changes."
 ---
 
-Change your working directory to the `cats-as-data-master` directory you created
+Change your working directory to the `cats-as-data` directory you created
 in the [setup section]({{ page.root }}/setup), and initialize a git repository
 in it:
 
 ~~~
-$ cd ~/Downloads/cats-as-data-master # or wherever you unzipped it
+$ cd ~/Downloads/cats-as-data # or wherever you unzipped it
 $ git init
 ~~~
 {: .bash}

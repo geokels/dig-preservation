@@ -391,7 +391,7 @@ moving backward and forward in time becomes much easier.
 > What is the output of cat CONTRIBUTING.md at the end of this set of commands?
 >
 > ~~~
-> $ cd cats-as-metadata-master
+> $ cd cats-as-data
 > $ nano CONTRIBUTING.md #input the following text: Please submit changes in a Pull Request
 > $ git add CONTRIBUTING.md
 > $ nano CONTRIBUTING.md #add the following text: Don't forget cat images, please.
@@ -434,10 +434,10 @@ moving backward and forward in time becomes much easier.
 > >
 > > Line by line:
 > > ~~~
-> > $ cd cats-as-metadata-master
+> > $ cd cats-as-data
 > > ~~~
 > > {: .bash}
-> > Enters into the 'cats-as-metadata-master' directory
+> > Enters into the 'cats-as-data' directory
 > >
 > > ~~~
 > > $ nano CONTRIBUTING.md #input the following text: Please submit changes in a Pull Request
