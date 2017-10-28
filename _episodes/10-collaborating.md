@@ -6,7 +6,8 @@ questions:
 - "How can I use version control to collaborate with other people?"
 objectives:
 - "Clone a remote repository."
-- "Collaborate pushing to a common repository."
+- "Collaborate pushing to a common repository and creating a pull request."
+- "Merge a pull request to accept changes from a Collaborator."
 keypoints:
 - "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
 ---
@@ -39,45 +40,58 @@ Next, the Collaborator needs to download a copy of the Owner's repository to her
 her `Desktop` folder, the Collaborator enters:
 
 ~~~
-$ git clone https://github.com/vlad/planets.git ~/Desktop/vlad-planets
+$ git clone https://github.com/ccline/cats-as-data.git ~/Desktop/ccline-cats-as-data
 ~~~
 {: .bash}
 
-Replace 'vlad' with the Owner's username.
+Replace `ccline` with the Owner's username. Also note the username prefix on the directory name. This is done because
+you already have your own project named `cats-as-data` in the Desktop folder.
 
 ![After Creating Clone of Repository](../fig/github-collaboration.svg)
 
 The Collaborator can now make a change in her clone of the Owner's repository,
-exactly the same way as we've been doing before:
+exactly the same way as we've been doing before. Please choose one of the tasks from the cleanup plan created in the Branching lesson.
 
 ~~~
-$ cd ~/Desktop/vlad-planets
-$ nano pluto.txt
-$ cat pluto.txt
+$ cd ~/Desktop/ccline-planets
+$ cat README.md
 ~~~
 {: .bash}
 
 ~~~
-It is so a planet!
+...
+Cleanup plan:
+- Get rid of all caps
+- Standardize dates
+- Standardize dimensions
 ~~~
 {: .output}
 
+Let's create a branch to do our new work in. Give the branch a representative name for the work you'll be doing.
+
 ~~~
-$ git add pluto.txt
-$ git commit -m "Add notes about Pluto"
+$ git checkout -b standardize-dates
+~~~
+{: .bash}
+
+When you have made your changes, add and commit them.
+~~~
+$ git add cats-human-situations.csv
+$ git commit -m "Standardized all dates"
 ~~~
 {: .bash}
 
 ~~~
- 1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+[standardize-dates 0e61f99] standardized dates
+ 1 file changed, 4 insertions(+)
+ create mode 100644 cats-human-situations.csv
 ~~~
 {: .output}
 
-Then push the change to the *Owner's repository* on GitHub:
+Then push the change to the Owner's repository on GitHub. Be sure to use the branch name you created.
 
 ~~~
-$ git push origin master
+$ git push origin standardize-dates
 ~~~
 {: .bash}
 
@@ -87,8 +101,8 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 306 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/vlad/planets.git
-   9272da5..29aba7c  master -> master
+To https://github.com/ccline/planets.git
+   9272da5..29aba7c  standardize-dates -> standardize-dates
 ~~~
 {: .output}
 
@@ -96,11 +110,31 @@ Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice earlier when we were setting up remotes by hand.)
 
-Take a look to the Owner's repository on its GitHub website now (maybe you need
-to refresh your browser.) You should be able to see the new commit made by the
-Collaborator.
+Now the Collaborator should open their browser to the Owner's repository.
 
-To download the Collaborator's changes from GitHub, the Owner now enters:
+We're going to create a [pull request](https://help.github.com/articles/about-pull-requests/).
+
+You should see a highlighted option noting the new branch and an option to *Compare & pull request*
+
+![Option to create pull request from branch](../fig/github-create-pr.png)
+
+Here you can add additional information to your pull request such as reasoning behind your changes. When you are happy
+with the title and description, click on the button to *Create pull request*.
+
+Notice that GitHub will automatically select the branch to merge your pull request into. This is usually `master` and
+exactly what you want. However, you can change this to any existing branch in the repository.
+
+The Collaborator's pull request will allow the Owner to:
+- review and accept the proposed changes
+- perform a merge, just like we did in the Merging branches lesson
+
+The Owner should now review the pull request and [merge](https://help.github.com/articles/merging-a-pull-request/) it.
+
+We recommend using the *Rebase and Merge* option.
+
+Congratulations, you just collaborated on GitHub!
+
+The Owner can now download the Collaborator's changes from GitHub:
 
 ~~~
 $ git pull origin master
@@ -112,13 +146,13 @@ remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 3 (delta 0)
 Unpacking objects: 100% (3/3), done.
-From https://github.com/vlad/planets
+From https://github.com/ccline/cats-as-data
  * branch            master     -> FETCH_HEAD
 Updating 9272da5..29aba7c
 Fast-forward
- pluto.txt | 1 +
+ cats-human-situations.csv | 1 +
  1 file changed, 1 insertion(+)
- create mode 100644 pluto.txt
+ create mode 100644 cats-human-situations.csv
 ~~~
 {: .output}
 
@@ -132,9 +166,11 @@ GitHub) are back in sync.
 > our changes. The basic collaborative workflow would be:
 >
 > * update your local repo with `git pull origin master`,
+> * create a branch for making your changes,
 > * make your changes and stage them with `git add`,
 > * commit your changes with `git commit -m`, and
-> * upload the changes to GitHub with `git push origin master`
+> * upload the changes to GitHub with `git push origin <branch>`
+> * create a pull request
 >
 > It is better to make many commits with smaller changes rather than
 > of one commit with massive changes: small commits are easier to
@@ -143,30 +179,7 @@ GitHub) are back in sync.
 
 > ## Switch Roles and Repeat
 >
-> Switch roles and repeat the whole process.
-{: .challenge}
-
-> ## Review Changes
->
-> The Owner push commits to the repository without giving any information
-> to the Collaborator. How can the Collaborator find out what has changed with
-> command line? And on GitHub?
->
-> > ## Solution
-> > On the command line, the Collaborator can use ```git fetch origin master```
-> > to get the remote changes into the local repository, but without merging
-> > them. Then by running ```git diff master origin/master``` the Collaborator
-> > will see the changes output in the terminal.
-> >
-> > On GitHub, the Collaborator can go to their own fork of the repository and
-> > look right above the light blue latest commit bar for a gray bar saying
-> > "This branch is 1 commit behind Our-Respository:master." On the far right of
-> > that gray bar is a Compare icon and link. On the Compare page the
-> > Collaborator should change the base fork to their own repository, then click
-> > the link in the paragraph above to "compare across forks", and finally
-> > change the head fork to the main repository. This will show all the commits
-> > that are different.
-> {: .solution}
+> Time permitting, switch roles and repeat the whole process.
 {: .challenge}
 
 > ## Comment Changes in GitHub
@@ -184,5 +197,5 @@ GitHub) are back in sync.
 >
 > Some backup software can keep a history of the versions of your files. They also
 > allows you to recover specific versions. How is this functionality different from version control?
-> What are some of the benifits of using version control, Git and GitHub?
+> What are some of the benefits of using version control, Git and GitHub?
 {: .challenge}
