@@ -1,5 +1,5 @@
 --- 
-title: Graphical User Interface (GUIs) Applications 
+title: Graphical User Interface (GUIs) 
 teaching: 5 
 exercises: 0
 questions: 
@@ -30,6 +30,17 @@ following:
 
 ![GitKraken demo](../fig/gitkraken.gif)
 
-## Popular Applications
+## Popular Free Applications
+
+| Application        | Platforms          | Link                    |
+|:-------------------|:-------------------|:------------------------|
+| GitKraken | Windows, Mac, Linux | https://www.gitkraken.com |
+| SourceTree | Windows, Mac | https://www.sourcetreeapp.com |
+| GitHub Desktop | Windows, Mac | https://desktop.github.com |
+| Magit | Windows, Mac, Linux | https://magit.vc |
+
+Lists of additional applications, free and paid are available at:
+*   https://git-scm.com/downloads/guis/
+*   https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools
 
 
