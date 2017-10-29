@@ -26,7 +26,7 @@ in the [setup section]({{ page.root }}/setup), and initialize a git repository
 in it:
 
 ~~~
-$ cd ~/Downloads/cats-as-data # or wherever you unzipped it
+$ cd ~/Desktop/cats-as-data # or wherever you unzipped it
 $ git init
 ~~~
 {: .bash}
