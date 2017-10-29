@@ -1,14 +1,15 @@
---- 
-title: Graphical User Interface (GUIs) 
-teaching: 5 
+---
+title: Graphical User Interface (GUIs)
+teaching: 5
 exercises: 0
-questions: 
-- "Are there Git GUI applications that I can use?" 
-objectives: 
-- "See an example of a Git GUI application" 
-- "Get a list of popular Git GUI applications." 
-keypoints: 
-- "There are a number of GUI applications available for working with Git." ---
+questions:
+- "Are there Git GUI applications that I can use?"
+objectives:
+- "See an example of a Git GUI application"
+- "Get a list of popular Git GUI applications."
+keypoints:
+- "There are a number of GUI applications available for working with Git."
+---
 
 There are a number of different graphical user interface (GUI) apps for Git
 available which many people prefer for their daily work. You might wonder why we
@@ -18,9 +19,9 @@ the command line is necessary to use and understand Git at its' fullest
 capacity.
 
 ## GUI Application Example
-## 
+
 Here is an example of a popular GUI called GitKraken being used to perform the
-following: 
+following:
 *   creating a new branch
 *   staging a file
 *   performing a commit
