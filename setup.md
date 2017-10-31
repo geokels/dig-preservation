@@ -17,7 +17,7 @@ First we'll download our sample data that we will be working with in the class:
    here" or "Extract all" option.
 6. Right-click on the `cats-as-data-master` folder and rename it to `cats-as-data`
 
-We'll do our work in the `cats-as-data` folder so make sure you change your working directory to it with:
+We'll do our work in the `cats-as-data` folder. So please open your terminal and change your working directory to it with:
 
 ~~~
 $ cd
