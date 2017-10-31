@@ -137,12 +137,11 @@ address.
 > ## Git Help and Manual
 >
 > Always remember that if you forget a `git` command, you can access
-> the list of commands by using `-h` and access the Git manual by
-> using `--help` :
+> the list of commands and the Git manual by using `help`:
 >
 > ~~~
-> $ git config -h
-> $ git config --help
+> $ git help
+> $ git help config
 > ~~~
 > {: .bash}
 {: .callout}
