@@ -100,6 +100,12 @@ address.
 > ~~~
 > {: .bash}
 >
+> Windows users, please note that even with the settings below, you will likely receive the following warning when adding files to git. Don't worry about this!
+> ~~~
+> "warning: CRLF will be replaced by LF in file."
+> ~~~
+> {: .output}
+>
 > If you are on a Mac OS/Linux machine, type in the following:
 > ~~~
 > $ git config --global core.autocrlf input
