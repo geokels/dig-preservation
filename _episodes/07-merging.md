@@ -41,7 +41,7 @@ commit:
 ~~~
 $ nano cats-human-situations.csv # make the necessary changes, then save and quit
 $ git add cats-human-situations.csv
-$ git commit -m 'fix capitalization of titles'
+$ git commit -m "fix capitalization of titles"
 
 [title-caps 31170d3] fix capitalization of titles
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -70,7 +70,7 @@ capitalized has been bugging you.  Whatever the case, make a change to
 ~~~
 $ nano README.md # make your change, save and quit
 $ git add README.md
-$ git commit -m 'capitalize README header'
+$ git commit -m "capitalize README header"
 
 [master 4268839] capitalize README header
  1 file changed, 1 insertion(+), 1 deletion(-)

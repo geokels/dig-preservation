@@ -398,7 +398,7 @@ now we’ll be satisfied with seeing that we are adding binary data to our
 repository.
 
 ~~~
-$ git commit -m 'add pictures of cats'
+$ git commit -m "add pictures of cats"
 ~~~
 {: .bash}
 
