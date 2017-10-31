@@ -26,9 +26,8 @@ Let's say that you want to try out a new reconciliation process for the subjects
 in your project, but you have no idea what the results will be. Rather than
 experimenting with the metadata in your master branch, you create a
 `subject_recon` branch and test it out there. If you are happy with the results,
-then you can incorporate those changes back into the master branch
-through a process called merging. If not, you can delete the branch and move on with your
-work.
+you can incorporate those changes back into the master branch through a process called
+merging. If not, you can delete the branch and move on with your work.
 
 Branches are also great for isolating sections of work, for collaborating with
 others, and managing workflows. For example, you have a student who will be
@@ -223,21 +222,17 @@ $ git log --graph --oneline --decorate --all
 ~~~
 {: .bash}
 
-## Renaming Branches
+>Tip: You can rename a branch using the `git branch -m` (move) command. The syntax is
+>`git branch -m old-name new-name`.
+>
+>~~~
+>$ git branch -m title-caps MIGRATE-1
+>~~~
+>{: .bash}
 
-You can rename a branch using the `git branch -m` (move) command.
 
-Let's rename the `title-caps` branch to use the issue number `MIGRATE-1` from your
-ticketing system.
 
-~~~
-$ git branch -m title-caps MIGRATE-1
 
-$ git branch
-  master
-* MIGRATE-1
-~~~
-{: .bash}
 
 
 
