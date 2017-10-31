@@ -35,11 +35,10 @@ $ git branch
 {: .bash}
 
 The student worker who was supposed to do this part of the cleanup didn’t show
-up today, so you have to do it.  Fix any titles that are in all caps, then
+up today, so you have to do it.  Open up your text editor, fix any titles that are in all caps, then
 commit:
 
 ~~~
-$ nano cats-human-situations.csv # make the necessary changes, then save and quit
 $ git add cats-human-situations.csv
 $ git commit -m "fix capitalization of titles"
 
@@ -68,7 +67,6 @@ capitalized has been bugging you.  Whatever the case, make a change to
 `README.md` and commit it to master:
 
 ~~~
-$ nano README.md # make your change, save and quit
 $ git add README.md
 $ git commit -m "capitalize README header"
 

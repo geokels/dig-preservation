@@ -22,14 +22,14 @@ directory by using the identifier `HEAD`.
 
 We've been adding one line at a time to `README.md`, so it's easy to track our
 progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make another change to `README.md`.
+let's make another change to `README.md`. Open the file in your editor, and add another line:
 
 ~~~
-$ nano README.md
-$ cat README.md
+If you would like, you can also put images of dogs and hexagonal software logos here.
 ~~~
-{: .bash}
+{: .output}
 
+Your `README.md` should now look like:
 ~~~
 # about your new image collection
 
@@ -172,13 +172,8 @@ index acbad52..0e44dff 100644
 All right! So
 we can save changes to files and see what we've changed—now how
 can we restore older versions of things?
-Let's suppose we accidentally overwrite our file:
-
-~~~
-$ nano README.md
-$ cat README.md
-~~~
-{: .bash}
+Let's suppose we accidentally overwrite our file. Open `README.md` in your editor and replace the contents with the
+following line:
 
 ~~~
 Dogs and hexagonal software logos as data.
@@ -241,10 +236,8 @@ $ git checkout 6b5b051 README.md
 ~~~
 {: .bash}
 
-~~~
-$ cat README.md
-~~~
-{: .bash}
+You can now open the `README.md` file in your editor to confirm you have your most recently committed version of the
+file back.
 
 ~~~
 # about your new image collection

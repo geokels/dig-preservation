@@ -166,7 +166,7 @@ given when the commit was created.
 
 > ## Where Are My Changes?
 >
-> If we run `ls` at this point, we will still see just one file called
+> If we run `ls` or `dir` at this point, we will still see just one file called
 > `README.md`.  That's because Git saves information about files'
 > history in the special `.git` directory mentioned earlier so that
 > our filesystem doesn't become cluttered (and so that we can't
@@ -181,10 +181,7 @@ The images are in the `images/` subdirectory of this repository.
 ~~~
 {: .output}
 
-~~~
-$ cat readme.md
-~~~
-{: .bash}
+Your `README.md` file should now look like:
 
 ~~~
 # about your new image collection
