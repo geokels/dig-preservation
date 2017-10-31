@@ -154,11 +154,10 @@ Save the file and commit your changes.
 
 ~~~
 $ git add README.md
-$ git commit -m "add initial cleanup plan
+$ git commit -m "add initial cleanup plan"
 
 [cleanup-plan 74eab99] add initial cleanup plan
  1 file changed, 5 insertions(+)
-cat12-l0aj:cats-as-data-master crissmeyer$
 ~~~
 {: .bash}
 
@@ -281,7 +280,7 @@ Delete your new branch using the `git branch -d` command followed by the name of
 the branch.
 
 ~~~
-$ git branch -d delete_me
+$ git branch -d delete-me
 Deleted branch delete-me (was 74eab99).
 ~~~
 {: .bash}
