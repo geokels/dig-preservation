@@ -33,12 +33,9 @@ Your `README.md` should now look like:
 ~~~
 # about your new image collection
 
-The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
-
-Image credits:
-- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
-- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
-- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+The `cats-human-situations.csv` file contains metadata for three image objects.
+The original metadata from the source institutions has been abbreviated and made
+messier so you have something to clean up!
 
 The images are in the `images/` subdirectory of this repository.
 If you would like, you can also put images of dogs and hexagonal software logos here.
@@ -64,21 +61,23 @@ $ git diff HEAD~2 README.md
 
 ~~~
 diff --git a/README.md b/README.md
-index acbad52..0e44dff 100644
+index f2a73f2..ef91fa5 100755
 --- a/README.md
 +++ b/README.md
-@@ -6,3 +6,6 @@ Image credits:
- - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
- - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
- - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+@@ -3,3 +3,6 @@
+ The `cats-human-situations.csv` file contains metadata for three image objects.
+ The original metadata from the source institutions has been abbreviated and made
+ messier so you have something to clean up!
 +
 +The images are in the `images/` subdirectory of this repository.
-+If you would like, you can also put pictures of dogs and hexagonal software logos here.
++If you would like, you can also put images of dogs and hexagonal software logos here.
 
 ~~~
 {: .output}
 
-We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
+We could also use `git show` which shows us what changes we made at an older commit as
+well as the commit message, rather than the _differences_ between a commit and our working
+directory that we see by using `git diff`.
 
 ~~~
 $ git show HEAD~2 README.md
@@ -93,20 +92,16 @@ Date:   Thu Oct 26 09:54:31 2017 -0700
     add notes on metadata
 
 diff --git a/README.md b/README.md
-new file mode 100644
-index 0000000..acbad52
+new file mode 100755
+index 0000000..cfa95f7
 --- /dev/null
 +++ b/README.md
-@@ -0,0 +1,8 @@
+@@ -0,0 +1,5 @@
 +# about your new image collection
 +
-+The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
-+
-+Image credits:
-+- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
-+- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
-+- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
-
++The `cats-human-situations.csv` file contains metadata for three image objects.
++The original metadata from the source institutions has been abbreviated and made
++messier so you have something to clean up!
 ~~~
 {: .output}
 
@@ -135,13 +130,13 @@ diff --git a/README.md b/README.md
 index acbad52..0e44dff 100644
 --- a/README.md
 +++ b/README.md
-@@ -6,3 +6,6 @@ Image credits:
- - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
- - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
- - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+@@ -3,3 +3,6 @@
+ The `cats-human-situations.csv` file contains metadata for three image objects.
+ The original metadata from the source institutions has been abbreviated and made
+ messier so you have something to clean up!
 +
 +The images are in the `images/` subdirectory of this repository.
-+If you would like, you can also put pictures of dogs and hexagonal software logos here.
++If you would like, you can also put images of dogs and hexagonal software logos here.
 ~~~
 {: .output}
 
@@ -159,13 +154,13 @@ diff --git a/README.md b/README.md
 index acbad52..0e44dff 100644
 --- a/README.md
 +++ b/README.md
-@@ -6,3 +6,6 @@ Image credits:
- - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
- - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
- - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+@@ -3,3 +3,6 @@
+ The `cats-human-situations.csv` file contains metadata for three image objects.
+ The original metadata from the source institutions has been abbreviated and made
+ messier so you have something to clean up!
 +
 +The images are in the `images/` subdirectory of this repository.
-+If you would like, you can also put pictures of dogs and hexagonal software logos here.
++If you would like, you can also put images of dogs and hexagonal software logos here.
 ~~~
 {: .output}
 
@@ -212,24 +207,18 @@ $ cat README.md
 ~~~
 # about your new image collection
 
-The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
-
-Image credits:
-- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
-- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
-- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+The `cats-human-situations.csv` file contains metadata for three image objects.
+The original metadata from the source institutions has been abbreviated and made
+messier so you have something to clean up!
 
 The images are in the `images/` subdirectory of this repository.
 ~~~
 {: .output}
 
-As you might guess from its name,
-`git checkout` checks out (i.e., restores) an old version of a file.
-In this case,
-we're telling Git that we want to recover the version of the file recorded in `HEAD`,
-which is the last saved commit.
-If we want to go back even further,
-we can use a commit identifier instead:
+As you might guess from its name,`git checkout` checks out (i.e., restores) an old
+version of a file. In this case, we're telling Git that we want to recover the version of
+the file recorded in `HEAD`, which is the last saved commit. If we want to go back even
+further, we can use a commit identifier instead:
 
 ~~~
 $ git checkout 6b5b051 README.md
@@ -242,15 +231,11 @@ file back.
 ~~~
 # about your new image collection
 
-The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
-
-Image credits:
-- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
-- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
-- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+The `cats-human-situations.csv` file contains metadata for three image objects.
+The original metadata from the source institutions has been abbreviated and made
+messier so you have something to clean up!
 
 The images are in the `images/` subdirectory of this repository.
-
 ~~~
 {: .output}
 
@@ -270,8 +255,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 {: .output}
 
-Again, we can put things back the way they were
-by using `git checkout`:
+Again, we can put things back the way they were by using `git checkout`:
 
 ~~~
 $ git checkout -f master README.md
@@ -326,13 +310,10 @@ here's how Git works in cartoon form:
 > Git would try to use the name of the file as the commit identifier.
 {: .callout}
 
-The fact that files can be reverted one by one
-tends to change the way people organize their work.
-If everything is in one large document,
-it's hard (but not impossible) to undo changes to the introduction
-without also undoing changes made later to the conclusion.
-If the introduction and conclusion are stored in separate files,
-on the other hand,
+The fact that files can be reverted one by one tends to change the way people organize
+their work. If everything is in one large document, it's hard (but not impossible) to undo
+changes to the introduction without also undoing changes made later to the conclusion.
+If the introduction and conclusion are stored in separate files, on the other hand,
 moving backward and forward in time becomes much easier.
 
 > ## Recovering Older Versions of a File
@@ -436,7 +417,7 @@ moving backward and forward in time becomes much easier.
 > > $ nano CONTRIBUTING.md #input the following text: Please submit changes in a Pull Request
 > > ~~~
 > > {: .bash}
-> > We created a new file and wrote a sentence in it, but the file is not tracked by git.  
+> > We created a new file and wrote a sentence in it, but the file is not tracked by git.
 > >
 > > ~~~
 > > $ git add CONTRIBUTING.md
