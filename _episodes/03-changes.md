@@ -115,9 +115,9 @@ $ git commit -m "add notes on metadata"
 {: .bash}
 
 ~~~
-[master (root-commit) c118dee] add notes on metadata
- 1 file changed, 6 insertions(+)
- create mode 100644 readme.md
+[master (root-commit) f1635dc] add notes on metadata
+ 1 file changed, 5 insertions(+)
+ create mode 100755 README.md
 ~~~
 {: .output}
 
@@ -186,12 +186,9 @@ Your `README.md` file should now look like:
 ~~~
 # about your new image collection
 
-The `cats-human-situations.csv` file contains metadata for three image objects. The original metadata from the source institutions has been abbreviated and made messier so you have something to clean up!
-
-Image credits:
-- The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
-- Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
-- A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+The `cats-human-situations.csv` file contains metadata for three image objects.
+The original metadata from the source institutions has been abbreviated and made
+messier so you have something to clean up!
 
 The images are in the `images/` subdirectory of this repository.
 ~~~
@@ -238,13 +235,13 @@ $ git diff
 
 ~~~
 diff --git a/README.md b/README.md
-index acbad52..17e3cdd 100644
+index f2a73f2..06aa594 100755
 --- a/README.md
 +++ b/README.md
-@@ -6,3 +6,5 @@ Image credits:
- - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
- - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
- - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+@@ -3,3 +3,5 @@
+ The `cats-human-situations.csv` file contains metadata for three image objects.
+ The original metadata from the source institutions has been abbreviated and made
+ messier so you have something to clean up!
 +
 +The images are in the `images/` subdirectory of this repository.
 ~~~
@@ -302,13 +299,13 @@ $ git commit -m "readme: where are the files?"
 >      1 file changed, 2 insertions(+)
 >
 >     diff --git a/README.md b/README.md
->     index acbad52..17e3cdd 100644
+>     index f2a73f2..06aa594 100755
 >     --- a/README.md
 >     +++ b/README.md
->     @@ -6,3 +6,5 @@ Image credits:
->      - The black cat, March 1896 (http://ark.digitalcommonwealth.org/ark:/50959/w0892s818). Courtesy Boston Public Library via Digital Commonwealth.
->      - Puzzums in costume (http://photos.lapl.org/carlweb/jsp/DoSearch?index=z&databaseID=968&terms=0000068045). Courtesy Los Angeles Public Library.
->      - A Xmas shopper (http://digitalcollections.nypl.org/items/510d47e1-43b5-a3d9-e040-e00a18064a99). Courtesy New York Public Library.
+>     @@ -3,3 +3,5 @@
+>      The `cats-human-situations.csv` file contains metadata for three image objects.
+>      The original metadata from the source institutions has been abbreviated and made
+>      messier so you have something to clean up!
 >     +
 >     +The images are in the `images/` subdirectory of this repository.
 >     --
