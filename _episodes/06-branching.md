@@ -1,19 +1,27 @@
 ---
-title: Working with branches
-teaching: 20
+title: Working with Branches
+teaching: 25
 exercises: 0
 questions:
 - "What are branches and why should I use them?"
+- "How do I merge one branch into another?"
 objectives:
 - "Understand how Git implements branching."
 - "Create and checkout a new branch."
+- "Understand how Git performs merges."
+- "Perform a merge."
+- "Delete a branch."
+
 keypoints:
 - "`git branch` to view current branches"
 - "`git branch branch-name` to create a new branch"
 - "`git checkout branch-name` to switch to a branch"
 - "`git branch -m branch-name` to rename a branch"
+- "`git merge branch-name` to merge a branch"
 - "`git branch -d delete-me` to delete a branch"
 - "Checking out a branch changes the “active” files in your repository directory."
+- "Merging applies commits from one branch to another."
+- "Merge commits are used to glue two histories together."
 ---
 
 Branches are one of the most powerful features in Git and they are very easy to
@@ -114,6 +122,14 @@ nothing to commit, working tree clean
 ~~~
 {: .bash}
 
+>Tip: If need to, you can rename a branch using the `git branch -m` (move) command. The
+syntax is >`git branch -m old-name new-name`.
+>
+>~~~
+>$ git branch -m title-cads title-caps
+>~~~
+>{: .bash}
+
 ## Switching Branches
 
 To switch to your new branch, you use the `git checkout` command.
@@ -183,9 +199,11 @@ c08d380 add notes on metadata
 The commit you just made is not on the `master` branch. Reopen the
 `cats-human-situations.csv` file. The change you just made is not there.
 
-You just realized that you wanted to add a clean-up plan to the `README.md` file
-in your `master` branch before beginning the cleanup\. Open `README.md` in your text
-editor and then add the following text at the bottom of the file:
+Now let's say you just realized that you wanted to add a clean-up plan to the `README.md`
+file in your `master` branch before beginning the cleanup. You can
+go ahead and do that now; the `title-caps` branch will be there when you’re
+ready to go back to it. Open `README.md` in your text editor and then add the following
+text at the bottom of the file:
 
 ~~~
 Cleanup plan:
@@ -222,25 +240,22 @@ $ git log --graph --oneline --decorate --all
 ~~~
 {: .bash}
 
->Tip: You can rename a branch using the `git branch -m` (move) command. The syntax is
->`git branch -m old-name new-name`.
->
->~~~
->$ git branch -m title-caps MIGRATE-1
->~~~
->{: .bash}
 
+## Merging Branches
 
+In most cases, when you create a new branch, the plan is to eventually take the
+changes you make on that branch and bring them back to `master` (or whichever
+branch you started on).  Sometimes you will keep a branch around forever; for
+example, you might have a permanent branch with sample files.  But here we’ll go over the
+common case: making a temporary branch, adding commits to it, and then merging it back
+into `master`.
 
+As we learned earlier, the title edits only exist in the `title-caps` branch. When
+we switch back to the `master` branch, the all-caps title is still there.
 
-
-
-
-
-
-## Deleting Branches
-
-Now let's learn how to delete a branch. Switch to the master branch.
+What we need is to _merge_ the change we made on the `title-caps` branch into
+the `master` branch. You should already be on the `master` branch, but if you are not,
+switch back to it now.
 
 ~~~
 $ git checkout master
@@ -248,29 +263,97 @@ Switched to branch 'master'
 ~~~
 {: .bash}
 
-Now create a new branch called `delete-me` using the `git branch` command.
+Now let’s merge the `title-caps` fix, using `git merge` to bring
+in the commits from the other branch:
 
 ~~~
-$ git branch delete-me
-
-$ git branch
-  MIGRATE-1
-  title-caps
-  delete-me
-* master
+$ git merge title-caps
 ~~~
 {: .bash}
 
-Notice that I did not create and checkout the branch at the same time. This is important
-because you cannot delete the branch you are on.
+If an editor window will appears, don’t be alarmed!  It will look like this:
 
-Delete your new branch using the `git branch -d` command followed by the name of
+~~~
+Merge branch 'title-caps'
+
+* title-caps:
+  fix capitalization of titles
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+~~~
+{: .bash}
+
+This is just Git asking you to provide a commit message.
+
+You might be wondering, “I’m just adding already-existing commits to my `master`
+branch!  They already have commit messages, why do I need to write a new one?”
+
+What’s happening here is that Git is creating a _merge commit_.  Because our
+`master` branch has a commit that `title-caps` doesn’t (we made added our clean-up plan to
+the README), the histories of the two branches aren’t identical.  And since
+the hashes of a commit is determined in part by the _previous commit_, a
+different history means a different hash.  So we cannot just add our commit
+`118d855` (“fix all caps in titles”) directly onto the `master` branch.
+
+This is what merge commits are for: to glue together these divergent histories.
+In your editor, save and quit to confirm the commit message.  You should see
+the merge complete successfully:
+
+~~~
+Merge made by the 'recursive' strategy.
+ cats-human-situations.csv | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+~~~
+
+Now if you look at the last three commits on the `master` branch, all
+our changes are present:
+
+~~~
+$ git log --oneline
+afb1372 Merge branch 'title-caps'
+e4a5780 add cleanup plan
+118d855 fix all caps in titles
+fd7cdc7 i forgot about adding the metadata
+9fef33a add pictures of cats
+a173d54 readme: where are the files?
+c08d380 add notes on metadata
+~~~
+{: .bash}
+
+The `title-caps` branch can now be deleted.  If you want to double-check whether
+all the changes from a particular branch have been merged into `master`, you can
+run `git branch --merged` from the `master branch`:
+
+~~~
+$ git checkout master
+
+$ git branch --merged
+* master
+  title-caps
+~~~
+{: .bash}
+
+`master` itself is there since technically, it has been merged into itself.
+But more importantly, this proves that there’s nothing left on `title-caps` that
+isn’t also on your `master` branch, so it’s safe to discard:
+
+## Deleting Branches
+
+Now let's learn how to delete a branch by deleting our newly merged `title-caps` branch.
+We are already on the `master` branch, but if we were not, we would need to check it out
+first -- you cannot delete the branch you are currently on.
+
+You delete a branch using `git branch -d` followed by the name of
 the branch.
 
 ~~~
-$ git branch -d delete-me
-Deleted branch delete-me (was 74eab99).
+$ git branch -d title-caps
+Deleted branch title-caps (was 118d855).
 ~~~
 {: .bash}
 
-Now the branch is gone.
+Your title-caps branch is now gone.
