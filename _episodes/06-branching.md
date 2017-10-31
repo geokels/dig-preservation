@@ -37,7 +37,7 @@ experimenting with the metadata in your master branch, you create a
 you can incorporate those changes back into the master branch through a process called
 merging. If not, you can delete the branch and move on with your work.
 
-Branches are also great for isolating sections of work, for collaborating with
+Branches are great for isolating sections of work, for collaborating with
 others, and managing workflows. For example, you have a student who will be
 working with you on your project and you have asked them to ensure that none of the
 titles are in all caps. You create a branch for them to work on the titles while
@@ -293,7 +293,7 @@ You might be wondering, “I’m just adding already-existing commits to my `mas
 branch!  They already have commit messages, why do I need to write a new one?”
 
 What’s happening here is that Git is creating a _merge commit_.  Because our
-`master` branch has a commit that `title-caps` doesn’t (we made added our clean-up plan to
+`master` branch has a commit that `title-caps` doesn’t (we added our clean-up plan to
 the README), the histories of the two branches aren’t identical.  And since
 the hashes of a commit is determined in part by the _previous commit_, a
 different history means a different hash.  So we cannot just add our commit
