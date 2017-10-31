@@ -43,5 +43,3 @@ following:
 Lists of additional applications, free and paid are available at:
 *   https://git-scm.com/downloads/guis/
 *   https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools
-
-
