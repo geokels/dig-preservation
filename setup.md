@@ -27,9 +27,9 @@ $ cd cats-as-data
 {: .bash}
 
 The `cats-as-data` folder should contain `README.md`,
-`cats-human-situations.csv`, and an `images` directory.  Depending on how you
-unzipped the files, these might all be inside another folder called
-`cats-as-data-master`.  If this happens to you, just `cd` once more into that
-inner folder: `cd cats-as-data-master`.
+`cats-human-situations.csv`, `cats-human-situations.md`, and an `images`
+directory.  Depending on how you unzipped the files, these might all be inside
+another folder called `cats-as-data-master`.  If this happens to you, just `cd`
+once more into that inner folder: `cd cats-as-data-master`.
 
 [workshop-setup]: https://swcarpentry.github.io/workshop-template/#git
