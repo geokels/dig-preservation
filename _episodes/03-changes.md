@@ -166,12 +166,15 @@ given when the commit was created.
 
 > ## Where Are My Changes?
 >
-> If we run `ls` or `dir` at this point, we will still see just one file called
-> `README.md`.  That's because Git saves information about files'
-> history in the special `.git` directory mentioned earlier so that
-> our filesystem doesn't become cluttered (and so that we can't
-> accidentally edit or delete an old version).
-{: .callout}
+> If we run `ls` or `dir` at this point, we will still see just the
+> same files we started with.  Where are the versions that Git is
+> keeping track of?
+>
+> Git saves information about files' history in the special `.git`
+> directory mentioned earlier so that our filesystem doesn't become
+> cluttered (and so that we can't accidentally edit or delete an old
+> version).
+> {: .callout}
 
 Now suppose we add more information to the file.  Type the text below
 at the end of the `README.md` file:
