@@ -26,6 +26,12 @@ $ cd cats-as-data
 ~~~
 {: .bash}
 
+(Depending on the terminal application you’re using, you may be able to use
+_tab-completion_ to make typing faster.  Try writing `cd cats-` and hitting the
+Tab key; if your terminal supports tab-completion, it will fill in the rest of
+the folder name.  This trick works for files as well as folders and should speed
+up your work a lot!)
+
 The `cats-as-data` folder should contain `README.md`,
 `cats-human-situations.csv`, `cats-human-situations.md`, and an `images`
 directory.  Depending on how you unzipped the files, these might all be inside
