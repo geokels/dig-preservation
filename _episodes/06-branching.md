@@ -1,6 +1,6 @@
 ---
 title: Working with Branches
-teaching: 25
+teaching: 30
 exercises: 0
 questions:
 - "What are branches and why should I use them?"
