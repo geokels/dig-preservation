@@ -3,293 +3,550 @@ layout: page
 title: "Instructor Notes"
 permalink: /guide/
 ---
-Using a software tool to handle the versions of your project files
-lets you focus on the more interesting/innovative aspects of your project.
-
-*   Version control's advantages
-    *   It's easy to set up
-    *   Every copy of a Git repository is a full backup of a project and its history
-    *   A few easy-to-remember commands are all you need for most day-to-day version control tasks
-    *   The [GitHub][github] hosting service provides a web-based collaboration service
-*   Two main concepts
-    *   *commit*: a recorded set of changes in your project's files
-    *   *repository*: the history of all your project's commits
-*   Why use GitHub?
-    *   No need for a server: easy to set up
-    *   GitHub's strong community: your colleagues are probably already there
-
-## Overall
-
-Version control might be the most important topic we teach, but Git is
-definitely the most complicated tool.  However, GitHub presently dominates the
-open software repository landscape, so the time and effort required to teach
-fundamental Git is justified and worthwhile.
-
-Because of this complexity, we don't teach novice learners about many
-interesting topics, such as branching, hashes, and commit objects.
-
-Instead we try to convince them that version control is useful for researchers
-working in teams or not, because it is
-
-*   a better way to "undo" changes,
-*   a better way to collaborate than mailing files back and forth, and
-*   a better way to share your code and other scientific work with the world.
-
-## Teaching Notes
-
-*   Resources for "splitting" your shell so that recent commands remain in view: https://github.com/rgaiacs/swc-shell-split-window.
-
-*   Make sure the network is working *before* starting this lesson.
-
-*   Drawings are particularly useful in this lesson: if you have a whiteboard,
-    [use it][drawings]!
-
-*   Version control is usually not the first subject in a workshop,
-    so get learners to create a GitHub account after the session before.
-    Remind learners that the username and email they use for GitHub (and setup
-    during Git configuration) will be viewable to the public by default.
-    However, there are many reasons why a learner may not want their personal
-    information viewable, and GitHub has [resources for keeping an email address
-    private][github-privacy].
-
-*   If some learners are using Windows, there will inevitably be issues
-    merging files with different line endings.  (Even if everyone's on
-    some flavor of Unix, different editors may or may not add a
-    newline to the last line of a file.) Take a moment to explain
-    these issues, since learners will almost certainly trip over them
-    again.  If learners are running into line ending problems, GitHub
-    has a [page][github-line-endings] that helps with troubleshooting.
-
-*   We don't use a Git GUI in these notes because we haven't found one that
-    installs easily and runs reliably on the three major operating systems, and
-    because we want learners to understand what commands are being run.  That
-    said, instructors should demo a GUI on their desktop at some point during
-    this lesson and point learners at [this page][github-gui].
-
-*   Instructors should show learners graphical diff/merge tools like
-    [DiffMerge][diffmerge].
-
-*   When appropriate, explain that we teach Git rather than CVS, Subversion, or
-    Mercurial primarily because of GitHub's growing popularity: CVS and
-    Subversion are now seen as legacy systems, and Mercurial isn't nearly as
-    widely used in the sciences right now.
-
-*   Further resources:
-    *    [git-it][git-it] is a self-paced command-line Git demo,
-         with [git-it-electron][git-it-electron] its GitHub Desktop successor.
-    *    [Code School][code-school] has a free interactive course, [Try Git][try-git].
-    *    for instructors, [the Git parable][git-parable] is useful background reading
-
 ## [Automated Version Control]({{ page.root }}/01-basics/)
 
-*   Ask, "Who uses 'undo' in their editor?" All say "Me". 'Undo' is the simplest
-    form of version control.
+Use slides
 
-*   Give learners a five-minute overview of what version control does for them
-    before diving into the watch-and-do practicals.  Most of them will have
-    tried to co-author papers by emailing files back and forth, or will have
-    biked into the office only to realize that the USB key with last night's
-    work is still on the kitchen table.  Instructors can also make jokes about
-    directories with names like "final version", "final version revised",
-    "final version with reviewer three's corrections", "really final version",
-    and, "come on this really has to be the last version" to motivate version
-    control as a better way to collaborate and as a better way to back work up.
+### Key Points
+* Version control is like an unlimited "undo".
+* Version control allows many people to work in parallel.
 
 ## [Setting Up Git]({{ page.root }}/02-setup/)
 
-*   We suggest instructors and students use `nano` as the text editor for this
-    lessons because
+_Slide: Setting Up Git_
 
-    *   it runs in all three major operating systems,
-    *   it runs inside the shell (switching windows can be confusing to students), and
-    *   it has shortcut help at the bottom of the window.
-
-    Please point out to students during setup that they can and should use
-    another text editor if they're already familiar with it.
-
-*   When setting up Git, be very clear what learners have to enter: it is
-    common for them to edit the instructor's details (e.g. email).  Check at
-    the end using `git config --list`.
+### Key Points
+* "Use `git config` to configure a user name, email address, editor, and other preferences once per machine."
+* "Use `git help` or `git help <command>` if you get stuck!"
 
 ## [Creating a Repository]({{ page.root }}/03-create/)
+### Section Overview:
+- "Where does Git store information?"
+- "How do I record changes in Git?"
+- "How do I check the status of my version control repository?"
+- "How do I record notes about what changes I made and why?"
 
-*   When you do `git status`, Mac users may see a `.DS_Store` file showing as
-    untracked. This a file that Mac OS creates in each directory.
+### Instructions:
+- Change to `cats-as-data` directory
+~~~
+$ cd ~/Desktop/cats-as-data # or wherever you unzipped it
+~~~
+{: .bash}
 
-*   The challenge "Places to create repositories" tries to reinforce the idea
-    that the `.git` folder contains the whole Git repo and deleting this folder
-    undoes a `git init`. It also gives the learner the way to fix the common
-    mistake of putting unwanted folders (like `Desktop`) under version control.
+- **New Command**: `git init` to initialize our git repository
+~~~
+$ git init
+~~~
+{: .bash}
 
-    Instead of removing the `.git` folder directly, you can choose to move it
-    first to a safer directory and remove it from there:
+- If we list the files, we can not see a hidden `.git` directory. Git stores all information about our project in here.
+  If we ever delete it, we will lose our project history
+~~~
+$ ls -a # or dir /ah on windows
+~~~
+{: .bash}
 
-    ~~~
-    $ mv .git temp_git
-    $ rm -rf  temp_git
-    ~~~
-    {: .bash}
+- **New Command**: `git status` to check current state of the repository
 
-    The challenge suggests that it is a bad idea to create a Git repo inside another repo.
-    For more discussion on this topic, please see [this issue][repos-in-repos].
+- `git status` highlights:
+1. Untracked files (git sees them)
+2. No commits yet (our repository exists, but no commits)
 
-## [Tracking Changes]({{ page.root }}/04-changes/)
+- **New Command** `git add` to tell Git to track files
+~~~
+$ git add README.md
+~~~
+{: .bash}
 
-*   It's important that learners do a full commit cycle by themselves (make
-    changes, `git diff`, `git add`, and `git commit`). The "`bio` repository"
-    challenge does that.
+- Let's check `git status` again
+~~~
+$ git status
+~~~
+{: .bash}
 
-*   This is a good moment to show a diff with a graphical diff tool. If you
-    skip it because you're short on time, show it once in GitHub.
+- `git status` highlights:
+1. Git sees README.md as a `new file`
+2. The `Changes to be committed` is because we haven't recorded this as a commit yet
 
-*   One thing may cause confusion is recovering old versions.  If, instead of
-    doing `$ git checkout f22b25e mars.txt`, someone does `$ git checkout
-    f22b25e`, they wind up in the "detached HEAD" state and confusion abounds.
-    It's then possible to keep on committing, but things like `git push origin
-    master` a bit later will not give easily comprehensible results.  It also
-    makes it look like commits can be lost.  To "fix" a "detached HEAD", simply
-    `git checkout master`.
+- Now add cats metadata csv file
+~~~
+$ git add cats-human-situations.csv
+~~~
+{: .bash}
 
-*   This is a good moment to show a log within a Git GUI. If you skip it
-    because you're short on time, show it once in GitHub.
+- **New Command**: `git commit` to commit the changes to our repository
+~~~
+$ git commit -m "add notes on metadata, and the metadata"
+~~~
+{: .bash}
 
-## [Ignoring Things]({{ page.root }}/06-ignore/)
+- `git commit` highlights:
+1. Git saves everything from the `git add` command in a commit
+2. A commit is given an identifier that is unique, as it is a hash of the contents of the commit (explain)
+3. The `-m` flag stands for message. used to record short description of the changes
+4. If the `-m` flag is not specified, our chosen editor will pop up and we'll be asked to add the commit message there.
 
-Just remember that you can use wildcards and regular expressions to ignore a
-particular set of files in `.gitignore`.
+- Describe good commit messages
 
-## [Remotes in GitHub]({{ page.root }}/07-github/)
+- **New Command**: `git log` to view our project history
+~~~
+$ git log
+~~~
+{: .bash}
 
-*   Make it clear that Git and GitHub are not the same thing: Git is an open
-    source version control tool, GitHub is a company that hosts Git
-    repositories in the web and provides a web interface to interact with repos
-    they host.
+- `git log` highlights:
+1. Lists all commits to a repo in reverse chronological order
+2. Each commit is listed with full identifier, author, created date, and commit message
 
-*   If your learners are advanced enough to be comfortable with SSH, tell them
-    they can use keys to authenticate on GitHub instead of passwords, but don't
-    try to set this up during class: it takes too long, and is a distraction
-    from the core ideas of the lesson.
+- Run `ls` and notice that there is just one copy of `README.md`
+- This is because Git saves all history in `.git` folder. So your working directory stays clean and up to date
 
-*   It is very useful to draw a diagram showing the different repositories
-    involved.
+- Add more information to `README.md` with your editor
+~~~
+The images are in the `images/` subdirectory of this repository.
+~~~
+{: .bash}
 
-## [Collaborating]({{ page.root }}/08-collab/)
+- Run `git status` - Notice we see it see the file it knows about is modified
 
-*   Decide in advance whether all the learners will work in one shared
-    repository, or whether they will work in pairs (or other small groups) in
-    separate repositories.  The former is easier to set up; the latter runs
-    more smoothly.
+- `no changes added to commit.` - We haven't done a `git add` for the file yet
 
-*   Role playing between two instructors can be effective when teaching the
-    collaboration and conflict sections of the lesson.  One instructor can play
-    the role of the repository owner, while the second instructor can play the
-    role of the collaborator.  If it is possible, try to use two projectors so
-    that the computer screens of both instructors can be seen.  This makes for
-    a very clear illustration to the students as to who does what.
+- Always good practice to review changes before saving them
 
-*   It is also effective to pair up students during this lesson and assign one
-    member of the pair to take the role of the owner and the other the role of
-    the collaborator.  In this setup, challenges can include asking the
-    collaborator to make a change, commit it, and push the change to the remote
-    repository so that the owner can then retrieve it, and vice-versa.  The
-    role playing between the instructors can get a bit "dramatic" in the
-    conflicts part of the lesson if the instructors want to inject some humor
-    into the room.
+- **New Command** `git diff` to compare our changes with the most recent commit
+~~~
+$ git diff
+~~~
+{: .bash}
 
-*   If you don't have two projectors, have two instructors at the front of the
-    room.  Each instructor does their piece of the collaboration demonstration
-    on their own computer and then passes the projector cord back and forth
-    with the other instructor when it's time for them to do the other part of
-    the collaborative workflow.  It takes less than 10 seconds for each
-    switchover, so it doesn't interrupt the flow of the lesson.
-    And of course it helps to give each of the instructors a different-colored
-    hat, or put different-colored sticky notes on their foreheads.
+- `git diff` highlights:
+1.  The first line tells us that Git is producing output similar to
+    the Unix `diff` command comparing the old and new versions of the
+    file.
+2.  The second line tells exactly which versions of the file Git is
+    comparing; `acbad52` and `17e3cdd` are unique identifiers for
+    those versions.
+3.  The third and fourth lines once again show the name of the file
+    being changed.
+4.  The remaining lines are the most interesting, they show us the
+    actual differences and the lines on which they occur.  In
+    particular, the `+` marker in the first column shows where we
+    added a line.  If we had instead removed lines, there would be `-`
+    markers instead.
 
-*   If you're the only instructor, the best way to create is clone the two
-    repos in your Desktop, but under different names, e.g., pretend one is your
-    computer at work:
+- We're comfortable with our changes, so let's commit:
+~~~
+$ git add README.md
+$ git commit -m "readme: where are the files?"
+~~~
+{: .bash}
 
-    ~~~
-    $ git clone https://github.com/vlad/planets.git planets-at-work
-    ~~~
-    {: .bash}
+- Terminology: Diff vs Patch vs Commit (slide?)
 
-*   It's very common that learners mistype the remote alias or the remote URL
-    when adding a remote, so they cannot `push`. You can diagnose this with
-    `git remote -v` and checking carefully for typos.
-    - To fix a wrong alias, you can do `git remote rename <old> <new>`.
-    - To fix a wrong URL, you can do `git remote set-url <alias> <newurl> `.
+- Add `images` folder to repository and show diff
+~~~
+$ git add images
+$ git diff
+~~~
+{: .bash}
 
-*   Before cloning the repo, be sure that nobody is inside another repo. The
-    best way to achieve this is moving to the `Desktop` before cloning: `cd &&
-    cd Desktop`.
+- Note no output, so introduce `git --staged`
+~~~
+$ git diff --staged
+~~~
+{: .bash}
 
-*   If both repos are in the `Desktop`, have them to clone their collaborator
-    repo under a given directory using a second argument:
+- Commit `images`
+~~~
+$ git commit -m "add pictures of cats"
+~~~
+{: .bash}
 
-    ~~~
-    $ git clone https://github.com/vlad/planets.git vlad-planet
-    ~~~
-    {: .bash}
+- Review `git log`
 
-*   The most common mistake is that learners `push` before `pull`ing. If they
-    `pull` afterward, they may get a conflict.
+## [Exploring History]({{ page.root }}/04-history/)
+### Section Overview:
+- "How can I identify old versions of files"
+- "How do I review changes?"
+- "How can I recover old versions of files"
 
-*   Conflicts, sometimes weird, will start to arise. Stay tight: conflicts are
-    next.
+### Instructions:
 
-## [Conflicts]({{ page.root }}/09-conflict/)
+- Introduce `HEAD` (pointer to most recent commit)
 
-*   Expect the learners to make mistakes. Expect *yourself* to make mistakes. This
-    happens because it is late in the lesson and everyone is tired.
+- Open `README.md` and add a new line and save:
+~~~
+If you would like, you can also put images of dogs and hexagonal software logos here.
+~~~
+{: .bash}
 
-*   If you're the only instructor, the best way to create a conflict is:
+- Introduce tilda `~` syntax for showing older commits
+~~~
+$ git diff HEAD~1 README.md
+$ git diff HEAD~2 README.md
+$ git diff HEAD~2
+~~~
+{: .bash}
 
-    *   Clone your repo in a different directory, pretending is your computer at
-        work: `git clone https://github.com/vlad/planets.git planets-at-work`.
-    *   At the office, you make a change, commit and push.
-    *   At your laptop repo, you (forget to pull and) make a change, commit and
-        try to push.
-    *   `git pull` now and show the conflict.
+- **New Command**: `git show` to see changes made in an older commit with all information (by who, when, etc.)
+~~~
+$ git show HEAD~2 README.md
+~~~
+{: .bash}
 
-*   Learners usually forget to `git add` the file after fixing the conflict and
-    just (try to) commit. You can diagnose this with `git status`.
+- Tilda syntax works great for going back a few commits. Beyond that you can use the commit identifiers. We only need ot
+  use the first few characters
+~~~
+$ git log #(find oldest commit hash and take first 5)
+$ git diff <first 5 characters> README.md
+~~~
+{: .bash}
 
-*   Remember that you can discard one of the two parents of the merge:
+- Now we're going to talk about restoring an older version. Open editor and replace the contents of `README.md` with
+  anything. Junk text.
 
-    *   discard the remote file, `git checkout --ours conflicted_file.txt`
-    *   discard the local file, `git checkout --theirs conflicted_file.txt`
+- Run `git status` (notice it tells us how to revert)
+- **New Command**: `git checkout` to bring back previous version of `README.md`
+~~~
+$ git checkout HEAD README.md
+~~~
+{: .bash}
 
-    You still have to `git add` and `git commit` after this. This is
-    particularly useful when working with binary files.
+- Notice our original changes are gone. We have the most recently commited version returned.
 
-## [Open Science]({{ page.root }}/10-open/)
+### Key Points
+* `git diff` displays differences between commits.
+* `git checkout` recovers old versions of files.
 
-## [Licensing]({{ page.root }}/11-licensing/)
+## [Ignoring Things]({{ page.root }}/05-ignore/)
+### Section Overview:
+- "How can I tell Git to ignore files I don't want to track?"
 
-We teach about licensing because questions about who owns what, or can use
-what, arise naturally once we start talking about using public services like
-GitHub to store files. Also, the discussion gives learners a chance to catch
-their breath after what is often a frustrating couple of hours.
+### Instructions:
+- Provide context. Things we don't want to track. We have such a file in `cats-as-data`. Highlight Git sees the file
+  now.
+~~~
+$ git status
+~~~
+{: .bash}
 
-## [Citation]({{ page.root }}/12-citation/)
+- We want to ignore `cats-human-situations.md` because it's a derivative
 
-## [Hosting]({{ page.root }}/13-hosting/)
+- Let's open `.gitignore` and add the filename
+~~~
+cats-human-situations.md
+~~~
+{: .bash}
 
-A common concern for learners is having their work publicly available on
-GitHub.  While we encourage open science, sometimes private repos are the
-only choice. It's always interesting to mention the options to have
-web-hosted private repositories.
+- Run `git status` again. Notice Git no longer lists the file.
+~~~
+$ git status
+~~~
+{: .bash}
 
-[code-school]: https://www.codeschool.com/
-[diffmerge]: https://sourcegear.com/diffmerge/
-[drawings]: https://marklodato.github.io/visual-git-guide/index-en.html
-[git-it]: https://github.com/jlord/git-it
-[git-it-electron]: https://github.com/jlord/git-it-electron
-[git-parable]: http://tom.preston-werner.com/2009/05/19/the-git-parable.html
-[github]: https://github.com/
-[github-gui]: http://git-scm.com/downloads/guis
-[github-line-endings]: https://help.github.com/articles/dealing-with-line-endings/#platform-all
-[github-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
-[repos-in-repos]: https://github.com/swcarpentry/git-novice/issues/272
-[try-git]: https://try.github.io
+- We do want to track the `.gitignore` file, so others have the same experience/behavior.
+~~~
+$ git add .gitignore
+$ git commit -m "Add the ignore file"
+$ git status
+~~~
+{: .bash}
+
+### Key Points
+* The `.gitignore` file tells Git what files to ignore
+* There are other patterns you can use to ignore files and folders.
+
+## [Working with Branches]({{ page.root }}/06-branching/)
+### Section Overview:
+- "What are branches and why should I use them?"
+- "How do I merge one branch into another?"
+
+### Instructions:
+
+_Slide: Working with Branches_
+
+- **New Command**: `git branch` to look at current branches. Asterisk by branch name tells you what branch you're on.
+~~~
+$ git branch
+~~~
+{: .bash}
+
+- Create a branch to work on cleanup. Fix titles in all caps
+~~~
+$ git branch title-caps
+~~~
+{: .bash}
+
+- Look at branches again
+~~~
+$ git branch
+~~~
+{: .bash}
+
+- Still on the `master` branch. You can also check this with `git status`
+
+- If you need to rename a branch, you can use the `-m` move flag.
+~~~
+$ git branch -m title-cads title-caps
+~~~
+{: .bash}
+
+- Let's switch to our new branch with `git checkout`
+~~~
+$ git checkout title-caps
+~~~
+{: .bash}
+
+- Tip: This can be done in one go with the `-b` flag
+~~~
+$ git checkout -b title-caps
+~~~
+{: .bash}
+
+- Open editor and fix the all caps title, save, close, commit:
+~~~
+$ git add cats-human-situations.md
+$ git commit -m "fix all caps in titles"
+~~~
+{: .bash}
+
+- Let's look at the log with `--oneline` flag
+~~~
+$ git log --oneline
+~~~
+{: .bash}
+
+- Switch back to `master` and look at the log. New commit not on `master`
+~~~
+$ git checkout master
+$ git log --oneline
+~~~
+{: .bash}
+
+- We realize we want to add a clean up plan to the `README.md` file. Open editor and add the following:
+~~~
+Cleanup plan:
+- Get rid of all caps in titles
+- Standardize dates
+- Standardize dimensions
+~~~
+{: .bash}
+
+- Save file, add, and commit changes:
+~~~
+$ git add README.md
+$ git commit -m "add cleanup plan"
+~~~
+{: .bash}
+
+- Let's view a graph version of the log
+~~~
+$ git log --graph --oneline --decorate --all
+~~~
+{: .bash}
+
+### Merging Branches
+- Intro and context (bringing changes back into `master`)
+
+- Sometimes branches live permanently
+
+- Title edits exist in `title-caps`, not in `master`. Need to merge `title-caps` into `master`. Checkout `master`.
+~~~
+$ git checkout master
+~~~
+{: .bash}
+
+- **New Command**: `git merge` to bring commits into `master`.
+~~~
+$ git merge title-caps
+~~~
+{: .bash}
+
+- If editor window pops up, it's OK! We need to provide a merge commit message
+
+- Look at recent commits on master
+~~~
+$ git log --oneline
+~~~
+{: .bash}
+
+- We can now safely delete the `title-caps` branch. To verify changes were merged, we can run `branch` with `--merged`
+  flag from `master`
+~~~
+$ git checkout master
+$ git branch --merged
+$ git branch -d title-caps
+~~~
+{: .bash}
+
+### Key Points
+* "`git branch` to view current branches"
+* "`git branch branch-name` to create a new branch"
+* "`git checkout branch-name` to switch to a branch"
+* "`git branch -m branch-name` to rename a branch"
+* "`git merge branch-name` to merge a branch"
+* "`git branch -d delete-me` to delete a branch"
+* "Checking out a branch changes the “active” files in your repository directory."
+* "Merging applies commits from one branch to another."
+* "Merge commits are used to glue two histories together."
+
+## [Remotes]({{ page.root }}/07-remotes/)
+### Section Overview:
+- "How do I share my changes with others on the web?"
+
+### Instructions:
+- Log in to Github
+
+- Create repository
+
+- Copy `https` url of the repo
+
+- Add the repository as the `origin` remote. `origin` is a convention.
+~~~
+$ git remote add origin https://github.com/your-username/cats-as-data.git
+$ git remote -v
+~~~
+{: .bash}
+
+- **New Command**: `git push` to push our local repository content to our Github repository. Remote version of `commit`
+~~~
+$ git push origin master
+~~~
+{: .bash}
+
+- **New Command**: `git pull` to pull changes from our Github repository to our local repository. Pulling now has no
+  effect.
+~~~
+$ git pull origin master
+~~~
+{: .bash}
+
+### Key Points
+* "A local Git repository can be connected to one or more remote repositories."
+* "Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH."
+* "`git push` copies changes from a local repository to a remote repository."
+* "`git pull` copies changes from a remote repository to a local repository."
+
+## [Collaborating]({{ page.root }}/08-collaborating/)
+### Section Overview:
+- "How can I use version control to collaborate with other people?"
+
+### Instructions:
+- _Slide: Collaborating_
+
+- Pair up. Though this can be done solo as well!
+
+- Owner and Collaborator roles.
+
+- Owner: give Collaborator access to Github repo (Settings -> Collaborators
+
+- Collaborator: **New Command**: `git clone` to get local copy of the owner's repository to make changes. Replace
+  `ccline` with owner's username.
+~~~
+$ git clone https://github.com/ccline/cats-as-data.git ~/Desktop/ccline-cats-as-data
+~~~
+{: .bash}
+
+- Check in! And view diagram of repositories
+
+- Collaborator: Open project `README.md` file. Choose a part of the cleanup plan to work on.
+
+- Collaborator: create branch and make changes
+~~~
+$ git checkout -b standardize-dates
+$ git add cats-human-situations.csv
+$ git commit -m "Standardize all dates"
+~~~
+{: .bash}
+
+- Check in!
+
+- Let's `push` our changes to the Owner's repo:
+~~~
+$ git push origin standardize-dates
+~~~
+{: .bash}
+
+- Collaborator: Create Pull Request (demo)
+
+- Check in!
+
+- Owner: Review Pull Request and Merge
+
+- Owner: get changes locally and view `csv`
+~~~
+$ git pull origin master
+$ git log
+~~~
+{: .bash}
+
+- Review basic workflow
+
+### Key Points
+* "`git clone` copies a remote repository with a remote called `origin` automatically setup."
+* "We can collaborate with others on Github using Pull Requests, and the branching workflow we already learned."
+
+## [Conflicts]({{ page.root }}/10-conflicts/)
+### Section Overview:
+- "What do I do when my changes conflict with someone else's?"
+
+### Instructions:
+- Introduction/Context
+
+- Create new branch to work on:
+~~~
+$ git checkout master
+$ git branch update-plan
+~~~
+{: .bash}
+
+- Add line to our cleanup plan in the `README.md`(in `master`):
+~~~
+- Reconcile subjects
+~~~
+{: .bash}
+
+- Save file, add and commit
+~~~
+$ git add README.md
+$ git commit -m "add subject reconciliation to plan"
+~~~
+{: .bash}
+
+- Switch to `update-plan` branch
+~~~
+$ git checkout update-plan
+~~~
+{: .bash}
+
+- Add line to our cleanup plan in the `README.md`(in `update-plan`):
+~~~
+- Add access permissions
+~~~
+{: .bash}
+
+- Now let's switch back to `master` and try to merge `update-plan`
+~~~
+$ git checkout master
+$ git merge update-plan
+~~~
+{: .bash}
+
+- Review Merge image
+
+- Open `README.md` to review merge conflicts to resolve
+
+- Update `README.md` to include both changes
+
+- Add `README.md`, check `git status`, and `commit`
+~~~
+$ git add README.md
+$ git status
+$ git commit -m "Merge changes from update-plan branch"
+~~~
+{: .bash}
+
+### Key Points
+* "Conflicts occur when two or more people change the same file(s) at the same time."
+* "The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts
+  so that they can be resolved."
