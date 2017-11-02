@@ -48,7 +48,8 @@ for the `user.email` value, e.g. `username@users.noreply.github.com`
 replacing `username` with your GitHub one. You can change the email
 address later on by using the `git config` command again.
 
-Catsy also has to set her favorite text editor, following this table:
+You might also want to configure Git to use your favorite text editor, following
+this table:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
@@ -113,6 +114,14 @@ address.
 > $ git config --global core.autocrlf input
 > ~~~
 > {: .bash}
+{: .callout}
+
+> ## More Windows-specific things you may wish to know
+>
+> Copying and pasting text to and from the terminal on Windows is done with
+> right-clicking as opposed to the usual `ctrl-c`/`ctrl-v` combo.  Right
+> click highlighted text to copy it, then right-click and select “Paste” to
+> paste.
 {: .callout}
 
 > ## Proxy
