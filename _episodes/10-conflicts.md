@@ -145,9 +145,9 @@ Cleanup plan:
 ~~~
 {: .output}
 
-Our change on the `master` branch, the one in `HEAD`—is preceded by <<<<<<<. Git has then
-inserted ======= as a separator between the conflicting changes and marked the end of the 
-content from the `update-plan` branch with >>>>>>> followed by the name of the branch. 
+Our change on the `master` branch, the one in `HEAD`—is preceded by `<<<<<<<`. Git has then
+inserted `=======` as a separator between the conflicting changes and marked the end of the 
+content from the `update-plan` branch with `>>>>>>>` followed by the name of the branch. 
 
 It is now up to us to edit this file to remove these markers and reconcile the changes. 
 We can do anything we want: keep the change made in `master`, keep the change made in 
@@ -209,7 +209,6 @@ git commit -m "Merge changes from update-plan branch"
 ~~~
 {: .output}
 
-
 Git's ability to resolve conflicts is very useful, but conflict resolution
 costs time and effort, and can introduce errors if conflicts are not resolved
 correctly. If you find yourself resolving a lot of conflicts in a project,
@@ -226,20 +225,21 @@ Conflicts can also be minimized with project management strategies:
 - Clarify who is responsible for what areas with your collaborators
 - Discuss what order tasks should be carried out in with your collaborators so
   that tasks expected to change the same lines won't be worked on simultaneously
-- If the conflicts are stylistic churn (e.g. tabs vs. spaces), establish a
+- Design your workflow to minimize the potential for conflicts.
+- If the conflicts are stylistic (e.g. tabs vs. spaces), establish a
   project convention that is governing and use code style tools (e.g.
   `htmltidy`, `perltidy`, `rubocop`, etc.) to enforce, if necessary
   
 ## Resolving Merge Conflict with GUI
 Let's see how one would resolve the same merge conflict using GitKraken.
 
-
+![GitKraken demo](../fig/gitkraken-merge-conflict.gif)
 
 ## Conflicts When Working with Remotes
 
 If your merge conflict is with a remote repository because you are attempting to push 
-changes prior to pulling in new changes locally, you will receive a message similar to
-this:
+changes prior to pulling in new changes from the remote, you will receive a message 
+similar to this:
 
 ~~~
 $ git push origin master
@@ -257,7 +257,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 {: .output}
 
 What you have to do in this situation is pull the changes from the remote, merge them into 
-the copy you're currently working in, and then push that. Start by pulling:
+your local copy, and then push that. Start by pulling:
 
 ~~~
 $ git pull origin master
