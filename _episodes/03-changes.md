@@ -41,7 +41,7 @@ $ ls -a
 {: .bash}
 
 ~~~
-.  ..  cats-human-situations.csv  .git  images  README.md
+.  ..  cats-human-situations.csv  cats-human-situations.md  .git  .gitignore  images  README.md
 ~~~
 {: .output}
 
@@ -64,8 +64,10 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
+        .gitignore
         README.md
         cats-human-situations.csv
+        cats-human-situations.md
         images/
 
 nothing added to commit but untracked files present (use "git add" to track)
@@ -100,24 +102,39 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
+        .gitignore
         cats-human-situations.csv
+        cats-human-situations.md
         images/
 ~~~
 {: .output}
 
-Git now knows that it's supposed to keep track of `README.md`, but it
-hasn't recorded these changes as a commit yet.  To get it to do that,
-we need to run one more command:
+Git now knows that it's supposed to keep track of `README.md`, but we want it to
+track the associated metadata as well:
 
 ~~~
-$ git commit -m "add notes on metadata"
+$ git add cats-human-situations.csv
+~~~
+{: .bash}
+
+(You can add multiple files at the same time, e.g. `git add README.md
+cats-human-situations.csv`.  You can even do `git add -A` to add everything in
+the directory!)
+
+Now we’ve let Git know to start tracking those two files, but we haven’t
+recorded these changes as a commit yet.  To get it to do that, we need to run
+one more command:
+
+~~~
+$ git commit -m "add notes on metadata, and the metadata"
 ~~~
 {: .bash}
 
 ~~~
-[master (root-commit) f1635dc] add notes on metadata
- 1 file changed, 5 insertions(+)
- create mode 100755 README.md
+[master (root-commit) 9ab6e19] add notes on metadata, and the metadata
+ 2 files changed, 9 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 cats-human-situations.csv
 ~~~
 {: .output}
 
@@ -149,11 +166,11 @@ $ git log
 {: .bash}
 
 ~~~
-commit 73f865ac9f0b3e790328d11ec6cd7653208a5a3e
+commit 9ab6e19c9872a23674772ea5a514f05a65ba5d9e (HEAD -> master)
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Aug 22 09:51:46 2013 -0400
+Date:   Thu Nov 2 12:03:47 2017 -0700
 
-    add notes on metadata
+    add notes on metadata, and the metadata
 ~~~
 {: .output}
 
@@ -216,7 +233,8 @@ Changes not staged for commit:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-        cats-human-situations.csv
+        .gitignore
+        cats-human-situations.md
         images/
 
 no changes added to commit (use "git add" and/or "git commit -a")
@@ -238,7 +256,7 @@ $ git diff
 
 ~~~
 diff --git a/README.md b/README.md
-index f2a73f2..06aa594 100755
+index f2a73f2..06aa594 100644
 --- a/README.md
 +++ b/README.md
 @@ -3,3 +3,5 @@
@@ -259,7 +277,7 @@ down into pieces:
     the Unix `diff` command comparing the old and new versions of the
     file.
 2.  The second line tells exactly which versions of the file Git is
-    comparing; `acbad52` and `17e3cdd` are unique identifiers for
+    comparing; `f2a73f2` and `06aa594` are unique identifiers for
     those versions.
 3.  The third and fourth lines once again show the name of the file
     being changed.
@@ -292,9 +310,9 @@ $ git commit -m "readme: where are the files?"
 >   generate something like the below with `git format-patch HEAD~1..HEAD`:
 >
 >     ~~~
->     From 7248345bacf4593e35c24398a4c375815ee006fc Mon Sep 17 00:00:00 2001
+>     From 939b6f04023d267e4036b269dbcbb45cb1638a1b Mon Sep 17 00:00:00 2001
 >     From: Catsy Cline <ccline@pawson.edu>
->     Date: Mon, 2 Oct 2017 12:43:54 -0700
+>     Date: Thu, 2 Nov 2017 12:07:41 -0700
 >     Subject: [PATCH] readme: where are the files?
 >
 >     ---
@@ -302,7 +320,7 @@ $ git commit -m "readme: where are the files?"
 >      1 file changed, 2 insertions(+)
 >
 >     diff --git a/README.md b/README.md
->     index f2a73f2..06aa594 100755
+>     index f2a73f2..06aa594 100644
 >     --- a/README.md
 >     +++ b/README.md
 >     @@ -3,3 +3,5 @@
@@ -312,7 +330,7 @@ $ git commit -m "readme: where are the files?"
 >     +
 >     +The images are in the `images/` subdirectory of this repository.
 >     --
->     2.14.2
+>     2.15.0
 >     ~~~
 >
 > - **commit** – a commit is a patch that is managed by a version
@@ -407,23 +425,23 @@ $ git log
 {: .bash}
 
 ~~~
-commit c769a0d20bf6b3060cd3c752f4def937880fa4eb (HEAD -> master)
+commit fefd5552f740e814dbb40f9247eddadf2dec4c82 (HEAD -> master)
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Wed Oct 25 15:57:06 2017 -0700
+Date:   Thu Nov 2 12:10:40 2017 -0700
 
     add pictures of cats
 
-commit 06156ef7588b1359b467bd277b290f04b03fd094
+commit 939b6f04023d267e4036b269dbcbb45cb1638a1b
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Wed Oct 25 15:47:58 2017 -0700
+Date:   Thu Nov 2 12:07:41 2017 -0700
 
     readme: where are the files?
 
-commit 73f865ac9f0b3e790328d11ec6cd7653208a5a3e
+commit 9ab6e19c9872a23674772ea5a514f05a65ba5d9e
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Wed Oct 25 15:44:38 2017 -0700
+Date:   Thu Nov 2 12:03:47 2017 -0700
 
-    add notes on metadata
+    add notes on metadata, and the metadata
 ~~~
 {: .output}
 
@@ -466,54 +484,5 @@ we first need to add the changed files to the staging area
 repository (`git commit`):
 
 ![The Git Commit Workflow](../fig/git-committing.svg)
-
-> ## Committing Multiple Files
->
-> The staging area can hold changes from any number of files
-> that you want to commit as a single snapshot.
->
-> 1. Add more text to `README.md`
-> 2. Tell git to begin tracking `cats-human-situations.csv`
-> 3. Add changes from both files to the staging area,
-> and commit those changes.
->
-> > ## Solution
-> >
-> > First we make our changes.  First add some text to the README (whatever you
-> feel is missing):
-> > ~~~
-> > $ nano README.md # or whichever editor you prefer
-> > ~~~
-> > {: .bash}
-> >
-> > Now you can add both files to the staging area. We can do that in one line:
-> >
-> > ~~~
-> > $ git add README.md cats-human-behavior.csv
-> > ~~~
-> > {: .bash}
-> > Or with multiple commands:
-> > ~~~
-> > $ git add README.md
-> > $ git add cats-human-behavior.csv
-> > ~~~
-> > {: .bash}
-> > Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
-> > ~~~
-> > $ git commit -m "i forgot about adding the metadata"
-> > ~~~
-> > {: .bash}
-> > ~~~
-> > [master 5988bdc] i forgot to add the metadata
-> >  2 files changed, 5 insertions(+), 1 deletion(-)
-> >  create mode 100644 cats-human-situations.csv
-> > ~~~
-> > {: .output}
-> >
-> > (Note that your commit hash will not be `5988bdc`; it will depend on what
-> > you added to `README.md`.)
-> >
-> {: .solution}
-{: .challenge}
 
 [commit-messages]: http://chris.beams.io/posts/git-commit/
