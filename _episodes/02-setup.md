@@ -119,9 +119,9 @@ address.
 > ## More Windows-specific things you may wish to know
 >
 > Copying and pasting text to and from the terminal on Windows is done with
-> right-clicking as opposed to the usual `ctrl-c`/`ctrl-v` combo.  Right
-> click highlighted text to copy it, then right-click and select “Paste” to
-> paste.
+> right-clicking as opposed to the usual `ctrl-c`/`ctrl-v` combo.  Right-click
+> highlighted text to copy it (if you’re in the Git bash shell you’ll have to
+> specifically select “Copy”), then right-click and select “Paste” to paste.
 {: .callout}
 
 > ## Proxy
