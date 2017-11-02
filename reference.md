@@ -9,7 +9,19 @@ permalink: /reference/
 [GitHub training website](https://services.github.com/resources/).
 *   An [interactive one-page visualisation](http://ndpsoftware.com/git-cheatsheet.html)
     about the relationships between workspace, staging area, local repository, upstream repository, and the commands associated with each (with explanations).
-*   Both resources are also available in other languages e.g. Spanish, French, and more
+
+Both resources are also available in other languages e.g. Spanish, French, and more.
+
+## In-Depth Documentation/Training
+
+- [Pro Git](https://git-scm.com/book/en/v2), the de-facto official reference by
+  Scott Chacon
+- [Git Essential
+  Training](https://www.lynda.com/Git-tutorials/Git-Essential-Training/100222-2.html)
+  from Lynda.com
+- [Just Enough Git to be (Less)
+  Dangerous](https://eev.ee/blog/2015/04/24/just-enough-git-to-be-less-dangerous/)
+  by eevee (not the Pokémon)
 
 ## Glossary
 
