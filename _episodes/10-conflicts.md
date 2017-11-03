@@ -63,8 +63,8 @@ $ git add README.md
 ~~~
 {: .bash}
 ~~~
-$ git commit -m "add subject reconcillation to plan"
-[master 9025b6e] add subject reconcillation to plan
+$ git commit -m "add subject reconciliation to plan"
+[master 9025b6e] add subject reconciliation to plan
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 {: .output}
