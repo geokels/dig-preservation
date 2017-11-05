@@ -85,15 +85,15 @@ $ git show HEAD~2 README.md
 {: .bash}
 
 ~~~
-commit 1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3
-Author: Catsy Cline <ccline@pawston.edu>
-Date:   Thu Oct 26 09:54:31 2017 -0700
+commit e46e6eb89b9b4c7d95e9ea21337d9b29f78930b8
+Author: Catsy Cline <ccline@pawson.edu>
+Date:   Sun Nov 5 14:40:08 2017 -0600
 
-    add notes on metadata
+    add notes on metadata, and the metadata
 
 diff --git a/README.md b/README.md
-new file mode 100755
-index 0000000..cfa95f7
+new file mode 100644
+index 0000000..f2a73f2
 --- /dev/null
 +++ b/README.md
 @@ -0,0 +1,5 @@
@@ -105,29 +105,24 @@ index 0000000..cfa95f7
 ~~~
 {: .output}
 
-In this way,
-we can build up a chain of commits.
-The most recent end of the chain is referred to as `HEAD`;
-we can refer to previous commits using the `~` notation,
-so `HEAD~1` (pronounced "head minus one")
-means "the previous commit",
+In this way, we can build up a chain of commits.  The most recent end of the
+chain is referred to as `HEAD`; we can refer to previous commits using the `~`
+notation, so `HEAD~1` (pronounced "head minus one") means "the previous commit",
 while `HEAD~123` goes back 123 commits from where we are now.
 
-We can also refer to commits using
-those long strings of digits and letters
-that `git log` displays.
-Our first commit was given the ID
-`1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3`,
-so let's try this:
+We can also refer to commits using those long strings of digits and letters that
+`git log` displays.  Our first commit was given the ID
+`e46e6eb89b9b4c7d95e9ea21337d9b29f78930b8`, so let's try this (your starting
+commit may have a different hash!):
 
 ~~~
-$ git diff 1ecad50e9ee2f30d9de4f3854af5faa6c5231fa3 README.md
+$ git diff e46e6eb89b9b4c7d95e9ea21337d9b29f78930b8 README.md
 ~~~
 {: .bash}
 
 ~~~
 diff --git a/README.md b/README.md
-index acbad52..0e44dff 100644
+index f2a73f2..ef91fa5 100644
 --- a/README.md
 +++ b/README.md
 @@ -3,3 +3,6 @@
@@ -140,35 +135,13 @@ index acbad52..0e44dff 100644
 ~~~
 {: .output}
 
-That's the right answer,
-but typing out random 40-character strings is annoying,
-so Git lets us use just the first few characters:
+That's the right answer, but typing out random 40-character strings is
+annoying, so Git lets us use just the first few characters, e.g.: `git diff 1ecad50 README.md`.
 
-~~~
-$ git diff 1ecad50 README.md
-~~~
-{: .bash}
-
-~~~
-diff --git a/README.md b/README.md
-index acbad52..0e44dff 100644
---- a/README.md
-+++ b/README.md
-@@ -3,3 +3,6 @@
- The `cats-human-situations.csv` file contains metadata for three image objects.
- The original metadata from the source institutions has been abbreviated and made
- messier so you have something to clean up!
-+
-+The images are in the `images/` subdirectory of this repository.
-+If you would like, you can also put images of dogs and hexagonal software logos here.
-~~~
-{: .output}
-
-All right! So
-we can save changes to files and see what we've changed—now how
-can we restore older versions of things?
-Let's suppose we accidentally overwrite our file. Open `README.md` in your editor and replace the contents with the
-following line:
+All right! So we can save changes to files and see what we've changed—now how
+can we restore older versions of things?  Let's suppose we accidentally
+overwrite our file. Open `README.md` in your editor and replace the contents
+with the following line:
 
 ~~~
 Dogs and hexagonal software logos as data.
@@ -189,55 +162,37 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   README.md
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        cats-human-situations.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
 {: .output}
 
-We can put things back the way they were
-by using `git checkout`:
+We can put things back the way they were by using `git checkout`:
 
 ~~~
 $ git checkout HEAD README.md
-$ cat README.md
 ~~~
 {: .bash}
 
-~~~
-# about your new image collection
-
-The `cats-human-situations.csv` file contains metadata for three image objects.
-The original metadata from the source institutions has been abbreviated and made
-messier so you have something to clean up!
-
-The images are in the `images/` subdirectory of this repository.
-~~~
-{: .output}
-
-As you might guess from its name,`git checkout` checks out (i.e., restores) an old
-version of a file. In this case, we're telling Git that we want to recover the version of
-the file recorded in `HEAD`, which is the last saved commit. If we want to go back even
-further, we can use a commit identifier instead:
+As you might guess from its name,`git checkout` checks out (i.e., restores) an
+old version of a file. In this case, we're telling Git that we want to recover
+the version of the file recorded in `HEAD`, which is the last saved commit. If
+we want to go back even further, we can use a commit identifier instead:
 
 ~~~
-$ git checkout 6b5b051 README.md
+$ git checkout e46e6e README.md
 ~~~
 {: .bash}
 
-You can now open the `README.md` file in your editor to confirm you have your most recently committed version of the
-file back.
-
-~~~
-# about your new image collection
-
-The `cats-human-situations.csv` file contains metadata for three image objects.
-The original metadata from the source institutions has been abbreviated and made
-messier so you have something to clean up!
-
-The images are in the `images/` subdirectory of this repository.
-~~~
-{: .output}
+You can now open the `README.md` file in your editor to confirm you have the
+original version of the file again.  Git has, of course, noticed:
 
 ~~~
 $ git status
@@ -267,23 +222,21 @@ $ git checkout -f master README.md
 > Above we used
 >
 > ~~~
-> $ git checkout 6b5b051 README.md
+> $ git checkout e46e6e README.md
 > ~~~
 > {: .bash}
 >
-> to revert `README.md` to its state after the commit `6b5b051`.
+> to revert `README.md` to its state after the commit `e46e6e`.
 > If you forget `README.md` in that command, Git will tell you that "You are in
 > 'detached HEAD' state." In this state, you shouldn't make any changes.
 > You can fix this by reattaching your head using ``git checkout master``
 {: .callout}
 
-It's important to remember that
-we must use the commit number that identifies the state of the repository
-*before* the change we're trying to undo.
-A common mistake is to use the number of
-the commit in which we made the change we're trying to get rid of.
-In the example below, we want to retrieve the state from before the most
-recent commit (`HEAD~1`), which is commit `f22b25e`:
+It's important to remember that we must use the commit number that identifies
+the state of the repository *before* the change we're trying to undo.  A common
+mistake is to use the number of the commit in which we made the change we're
+trying to get rid of.  In the example below, we want to retrieve the state from
+before the most recent commit (`HEAD~1`), which is commit `2199d6`:
 
 ![Git Checkout](../fig/git-checkout.svg)
 

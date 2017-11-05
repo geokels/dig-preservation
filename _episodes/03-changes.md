@@ -131,7 +131,7 @@ $ git commit -m "add notes on metadata, and the metadata"
 {: .bash}
 
 ~~~
-[master (root-commit) 9ab6e19] add notes on metadata, and the metadata
+[master (root-commit) e46e6eb] add notes on metadata, and the metadata
  2 files changed, 9 insertions(+)
  create mode 100644 README.md
  create mode 100644 cats-human-situations.csv
@@ -166,9 +166,9 @@ $ git log
 {: .bash}
 
 ~~~
-commit 9ab6e19c9872a23674772ea5a514f05a65ba5d9e (HEAD -> master)
+commit e46e6eb89b9b4c7d95e9ea21337d9b29f78930b8 (HEAD -> master)
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Nov 2 12:03:47 2017 -0700
+Date:   Sun Nov 5 14:40:08 2017 -0600
 
     add notes on metadata, and the metadata
 ~~~
@@ -310,9 +310,9 @@ $ git commit -m "readme: where are the files?"
 >   generate something like the below with `git format-patch HEAD~1..HEAD`:
 >
 >     ~~~
->     From 939b6f04023d267e4036b269dbcbb45cb1638a1b Mon Sep 17 00:00:00 2001
+>     From 2199d61adc2123fe163f4103d1dec4df46ee76bb Mon Sep 17 00:00:00 2001
 >     From: Catsy Cline <ccline@pawson.edu>
->     Date: Thu, 2 Nov 2017 12:07:41 -0700
+>     Date: Sun, 5 Nov 2017 14:44:03 -0600
 >     Subject: [PATCH] readme: where are the files?
 >
 >     ---
@@ -425,21 +425,21 @@ $ git log
 {: .bash}
 
 ~~~
-commit fefd5552f740e814dbb40f9247eddadf2dec4c82 (HEAD -> master)
+commit bce6b419c7e1bc785447fe19b89d4153c2d96366 (HEAD -> master)
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Nov 2 12:10:40 2017 -0700
+Date:   Sun Nov 5 14:45:37 2017 -0600
 
     add pictures of cats
 
-commit 939b6f04023d267e4036b269dbcbb45cb1638a1b
+commit 2199d61adc2123fe163f4103d1dec4df46ee76bb
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Nov 2 12:07:41 2017 -0700
+Date:   Sun Nov 5 14:44:03 2017 -0600
 
     readme: where are the files?
 
-commit 9ab6e19c9872a23674772ea5a514f05a65ba5d9e
+commit e46e6eb89b9b4c7d95e9ea21337d9b29f78930b8
 Author: Catsy Cline <ccline@pawson.edu>
-Date:   Thu Nov 2 12:03:47 2017 -0700
+Date:   Sun Nov 5 14:40:08 2017 -0600
 
     add notes on metadata, and the metadata
 ~~~
