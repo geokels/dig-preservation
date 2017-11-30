@@ -2,14 +2,14 @@
 # Values for this lesson.
 #------------------------------------------------------------
 
-# Which carpentry is this ("swc" or "dc")?
-carpentry: "swc"
+# Which carpentry is this ("swc" or "dc")? --Commenting out because not a part of "swc" or "dc"
+# carpentry: "swc"
 
 # Overall title for pages.
-title: "Version Control with Git"
+title: "Digital Preservation: Tools and Strategies"
 
-# Contact email address.
-email: lessons@software-carpentry.org
+# Contact email address. --Commenting out because I don't want to provide this info at this time.
+# email: 
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
