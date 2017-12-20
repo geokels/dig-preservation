@@ -2,8 +2,10 @@
 layout: lesson
 root: .
 ---
-### SESSION 2K: Workshop
-### Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
+### AIA and SCS Joint Annual Meeting 
+### January 4–7, 2018
+#### SESSION 2K: Workshop
+#### Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
 
 *Issues of sustainable digital preservation need to be more uniformly addressed
 within the archaeological community. Enthusiasm for integrating new digital
@@ -21,7 +23,7 @@ be given. Participants should bring laptops.*
 
 Presenters:
 
-* [Kelsey George, Cataloging and Metadata Strategies Librarian, UNLV]
+* Kelsey George, Cataloging and Metadata Strategies Librarian, UNLV
 * [Luke Hollis, Founder and Engineer, Archimedes Digital]
 * [Theresa Huntsman, Publications Data Manager, Sardis Expedition, Harvard Art Museums]
 * [Eric Kansa, Program Director, Open Context]
