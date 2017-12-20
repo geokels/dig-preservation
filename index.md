@@ -26,7 +26,7 @@ Presenters:
 * [Luke Hollis, Founder and Engineer, Archimedes Digital]
 * [Theresa Huntsman, Publications Data Manager, Sardis Expedition, Harvard Art Museums]
 * [Eric Kansa, Program Director, Open Context]
-* [Eric Poehler, Associate Professor | Director, Five Colleges Blended Learning and Digital Humanities programs, UMass Amherst]
+* [Eric Poehler, Associate Professor, UMass Amherst and Director, Five Colleges Blended Learning and Digital Humanities programs]
 
 
 [Luke Hollis]: https://archimedes.digital/about
