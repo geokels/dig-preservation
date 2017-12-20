@@ -10,5 +10,9 @@ Please see <https://geokels.github.io/dig-preservation/> for a rendered version 
 Maintainers:
 
 * [Kelsey George]
+* [Theresa Huntsman]
+* [Eric Kansa]
 
 [Kelsey George]: https://github.com/geokels/
+[Theresa Huntsman]: https://github.com/theresahuntsman/
+[Eric Kansa]: https://github.com/ekansa/
