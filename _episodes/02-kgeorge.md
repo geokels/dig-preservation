@@ -1,15 +1,20 @@
 ---
-title: Setting Up Git
+title: Cultivating a Culture of Digital Preservation Inside Academic Libraries and Out
 teaching: 5
 exercises: 0
 questions:
-- "How do I get set up to use Git?"
+- "What can I bring back to my institution?"
 objectives:
-- "Configure `git` the first time it is used on a computer."
-- "Understand the meaning of the `--global` configuration flag."
+- "Understand the current culture of digital preservation."
+- "Understand the difference between digital collections and institutional repositories."
 keypoints:
--   "Use `git config` to configure a user name, email address, editor, and other preferences once per machine."
+-   "Faculty are a key component of the users that academic libraries serve and have power to influence the University administration's decision to support library services."
 ---
+
+### Kelsey George
+#### University of Nevada, Las Vegas 
+#### Cataloging and Metadata Strategies Librarian 
+(as of February 2018)
 
 When we use Git on a new computer for the first time,
 we need to configure a few things. Below are a few examples

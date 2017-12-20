@@ -19,3 +19,17 @@ or length of the project. Participants will have the opportunity to break out in
 small groups to workshop solutions they are experiencing in preserving their research.
 Demonstrations of some digital preservation and version control tools will
 be given. Participants should bring laptops.*
+
+Presenters:
+
+* [Kelsey George, Cataloging and Metadata Strategies Librarian, UNLV]
+* [Luke Hollis, Founder and Engineer, Archimedes Digital]
+* [Theresa Huntsman, Publications Data Manager, Sardis Expedition, Harvard Art Museums]
+* [Eric Kansa, Program Director, Open Context]
+* [Eric Poehler, Associate Professor | Director, Five Colleges Blended Learning and Digital Humanities programs, UMass Amherst]
+
+
+[Luke Hollis]: https://archimedes.digital/about
+[Theresa Huntsman]: http://harvardartmuseums.academia.edu/TheresaHuntsman
+[Eric Kansa]: http://dlab.berkeley.edu/people/eric-kansa
+[Eric Poehler]: https://www.umass.edu/classics/member/eric-poehler
