@@ -2,8 +2,8 @@
 layout: lesson
 root: .
 ---
-### AIA and SCS Joint Annual Meeting 
-### January 4–7, 2018
+#### January 5, 2018
+#### AIA and SCS Joint Annual Meeting 
 #### SESSION 2K: Workshop
 #### Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
 
@@ -24,10 +24,10 @@ be given. Participants should bring laptops.*
 Presenters:
 
 * Kelsey George, Cataloging and Metadata Strategies Librarian, UNLV
-* [Luke Hollis, Founder and Engineer, Archimedes Digital]
-* [Theresa Huntsman, Publications Data Manager, Sardis Expedition, Harvard Art Museums]
-* [Eric Kansa, Program Director, Open Context]
-* [Eric Poehler, Associate Professor, UMass Amherst and Director, Five Colleges Blended Learning and Digital Humanities programs]
+* [Luke Hollis], Founder and Engineer, Archimedes Digital
+* [Theresa Huntsman], Publications Data Manager, Sardis Expedition, Harvard Art Museums
+* [Eric Kansa], Program Director, Open Context
+* [Eric Poehler], Associate Professor, UMass Amherst and Director, Five Colleges Blended Learning and Digital Humanities programs
 
 
 [Luke Hollis]: https://archimedes.digital/about
