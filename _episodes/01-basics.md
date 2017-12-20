@@ -1,15 +1,15 @@
 ---
-title: Automated Version Control
+title: Introduction to Digital Preservation
 teaching: 5
 exercises: 0
 questions:
-- "What is version control and why should I use it?"
+- "What is digital preservation and why should I care?"
 objectives:
-- "Understand the benefits of an automated version control system."
-- "Understand the basics of how Git works."
+- "Understand the benefits of a digital preservation workflow."
+- "Understand how to start utilizing digital preservation."
 keypoints:
-- "Version control is like an unlimited 'undo'."
-- "Version control also allows many people to work in parallel."
+- "The goal of digital preservation is to provide long term accessibility to digitized and born-digital materials."
+- "Digital preservation can be applied at every level."
 ---
 
 We'll start by exploring how version control can be used
@@ -32,6 +32,7 @@ then save just the changes you made at each step of the way. You can
 think of it as a tape: if you rewind the tape and start at the base
 document, then you can play back each change and end up with your
 latest version.
+
 
 ![Changes Are Saved Sequentially](../fig/play-changes.svg)
 
