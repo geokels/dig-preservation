@@ -1,5 +1,5 @@
 ---
-title: We have it, now what do we DO with it?: A multiplicity of institutional, open source, and third-party platforms for data preservation at the Archaeological Exploration of Sardis
+title: We have it, now what do we DO with it? A multiplicity of institutional, open source, and third-party platforms for data preservation at the Archaeological Exploration of Sardis
 teaching: 5
 exercises: 0
 questions:
@@ -19,5 +19,7 @@ keypoints:
 ### Theresa Huntsman
 #### Harvard Art Museums
 #### Publications Data Manager, Sardis Expedition
+
+### We have it, now what do we DO with it? A multiplicity of institutional, open source, and third-party platforms for data preservation at the Archaeological Exploration of Sardis
 
 Insert any relevant presentation material here.
