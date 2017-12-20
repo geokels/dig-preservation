@@ -1,7 +1,7 @@
 ---
 title: Resources
-teaching: 0
-exercises: 75
+teaching: 75
+exercises: 0
 questions:
 - "What resources are available to me as a researcher?"
 - "How would I do ______?"
