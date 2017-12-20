@@ -2,9 +2,8 @@
 layout: lesson
 root: .
 ---
-### AIA and SCS Joint Annual Meeting - January 4–7, 2018
-#### SESSION 2K: Workshop
-#### Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
+### SESSION 2K: Workshop
+### Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
 
 *Issues of sustainable digital preservation need to be more uniformly addressed
 within the archaeological community. Enthusiasm for integrating new digital
