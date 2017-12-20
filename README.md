@@ -1,17 +1,14 @@
-git-novice
+dig-preservation
+
+Digital Preservation: Tools and Strategies for Preserving Archaeological Data for Future Generations
 ==========
 
-An introduction to version control for novices using Git.
-Please see <https://swcarpentry.github.io/git-novice/> for a rendered version of this material,
-[the lesson template documentation][lesson-example]
-for instructions on formatting, building, and submitting material,
-or run `make` in this directory for a list of helpful commands.
+A workshop developed for AIA/SCS Joint Meeting in Boston, 2018 by Kelsey George (Cataloging & Metadata Assistant, UCSB), Theresa Huntsman (Publications Data Manager, Sardis Expedition, Harvard Art Museums), and Eric Kansa (Program Director, Open Context).
+
+Please see <https://geokels.github.io/dig-preservation/> for a rendered version of this material.
 
 Maintainers:
 
-* [Ivan Gonzalez][gonzalez_ivan]
-* [Daisie Huang][huang_daisie]
+* [Kelsey George]
 
-[gonzalez_ivan]: http://software-carpentry.org/team/#gonzalez_ivan
-[huang_daisie]: http://software-carpentry.org/team/#huang_daisie
-[lesson-example]: https://swcarpentry.github.io/lesson-example
+[Kelsey George]: https://github.com/geokels/
