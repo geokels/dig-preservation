@@ -22,12 +22,14 @@ keypoints:
 *	[Digital Preservation Coalition's *Digital Preservation Handbook 2nd Edition.*] *The Digital Preservation Coalition is a non-profit based in the UK and Ireland made up of member organizations who promote long-term accessibility of digital assets.* 
 *	[Internet Archive] *Internet Archive is a non-profit library of millions of free books, movies, software, music, websites, and more. Archive-It enables you to capture, manage and search collections of digital content without any technical expertise or hosting facilities.*
 *	[Digital Preservation Management Tutorial: Implementing Short Term Strategies for Long Term Problems] *Support for this tutorial comes from the National Endowment for the Humanities. The tutorial was developed by Cornell University Library and is now hosted and maintained by the Inter-university Consortium for Political and Social Research (ICPSR). Tutorials available in English, French, and Italian.*
+* [Digital Data Management for a New Generation] *These materials are geared toward early training in best practices. Such practices ultimately support long-term management—including upload into digital data archives and institutional repositories—and facilitate data sharing where appropriate. Hosted by the American Anthropological Association.*
 
 [POWRR]: http://digitalpowrr.niu.edu/
 [Digital Preservation in a Box]: http://digitalpowrr.niu.edu/digital-preservation-101/
 [Digital Preservation Coalition's *Digital Preservation Handbook 2nd Edition.*]: http://dpconline.org/handbook
 [Internet Archive]: https://archive.org/web/
 [Digital Preservation Management Tutorial: Implementing Short Term Strategies for Long Term Problems]: http://www.dpworkshop.org/index.html
+[Digital Data Management for a New Generation]: http://www.americananthro.org/LearnAndTeach/Landing.aspx?ItemNumber=20641&navItemNumber=20708
 
 #### Version Control
 
