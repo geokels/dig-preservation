@@ -1,7 +1,7 @@
 ---
 title: Resources
-teaching: 75
-exercises: 0
+teaching: 0
+exercises: 75
 questions:
 - "What resources are available to me as a researcher?"
 - "How would I do ______?"
@@ -11,7 +11,13 @@ objectives:
 - "Provide relevant resources to serve as a starting point for researchers to undertake their own digital preservation."
 keypoints:
 - "To be updated with relevant discussion as the workshop unfolds."
+<<<<<<< HEAD
 --- 
+=======
+---
+
+### Additional Resources 
+>>>>>>> b5bacf6b2ef293d39f25ea697561043f5f5af387
 
 #### Relevant Standards/Resources for Digital Preservation
 
