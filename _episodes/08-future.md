@@ -15,7 +15,7 @@ objectives:
 
 ##### Is there a need for formal data management workshops or tutorials geared towards archaeological research?
 
-[Roadmap for Lesson Development]*Data Carpentry and Software Carpentry are committed to developing and supporting lessons in new domains, and to helping Carpentry community members do so as well. The development and maintenance of lessons requires significant resources, both up front and over the long term; this document outlines the requirements and procedures we have put in place to ensure success and sustainability.*
+[Roadmap for Lesson Development]  *Data Carpentry and Software Carpentry are committed to developing and supporting lessons in new domains, and to helping Carpentry community members do so as well. The development and maintenance of lessons requires significant resources, both up front and over the long term; this document outlines the requirements and procedures we have put in place to ensure success and sustainability.*
 
 [Roadmap for Lesson Development]: http://www.datacarpentry.org/lessons-incubation/
 
