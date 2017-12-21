@@ -23,11 +23,11 @@ be given. Participants should bring laptops.*
 
 Presenters:
 
-* Kelsey George, Cataloging and Metadata Strategies Librarian, UNLV
-* [Luke Hollis], Founder and Engineer, Archimedes Digital
-* [Theresa Huntsman], Publications Data Manager, Sardis Expedition, Harvard Art Museums
-* [Eric Kansa], Program Director, Open Context
-* [Eric Poehler], Associate Professor, UMass Amherst and Director, Five Colleges Blended Learning and Digital Humanities programs
+* Kelsey George, *Cataloging and Metadata Strategies Librarian*, UNLV
+* [Luke Hollis], *Founder and Engineer*, Archimedes Digital
+* [Theresa Huntsman], *Publications Data Manager, Sardis Expedition*, Harvard Art Museums
+* [Eric Kansa], *Program Director*, Open Context
+* [Eric Poehler], *Associate Professor*, UMass Amherst and *Director*, Five Colleges Blended Learning and Digital Humanities programs
 
 
 [Luke Hollis]: https://archimedes.digital/about

@@ -10,10 +10,8 @@ objectives:
 - "Allow researchers to ask questions regarding how digital preservation affects their specific work."
 - "Provide relevant resources to serve as a starting point for researchers to undertake their own digital preservation."
 keypoints:
-- "To be updated with relevant discussion as the workshop unfolds.""
----
-
-### Additional Resources 
+- "To be updated with relevant discussion as the workshop unfolds."
+--- 
 
 #### Relevant Standards/Resources for Digital Preservation
 
