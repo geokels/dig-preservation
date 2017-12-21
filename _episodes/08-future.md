@@ -1,5 +1,5 @@
 ---
-title: Future of Archaeological Research: Data Management and Digital Preservation
+title: Future of Archaeological Research Data Management and Digital Preservation
 teaching: 15
 exercises: 0
 questions:
