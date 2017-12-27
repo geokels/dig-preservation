@@ -30,6 +30,7 @@ keypoints:
 [Internet Archive]: https://archive.org/web/
 [Digital Preservation Management Tutorial: Implementing Short Term Strategies for Long Term Problems]: http://www.dpworkshop.org/index.html
 [Digital Data Management for a New Generation]: http://www.americananthro.org/LearnAndTeach/Landing.aspx?ItemNumber=20641&navItemNumber=20708
+[Archaeology Data Service / Digital Antiquity Guide to Good Practice}: http://guides.archaeologydataservice.ac.uk/g2gp/
 
 #### Version Control
 
