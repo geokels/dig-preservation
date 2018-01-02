@@ -22,30 +22,24 @@ keypoints:
 
 ![Image of second power point slide. Text on slide reads: Digitization does not equal access. Digitization does not equal preservation. Digitization without a long term storage and preservation plan is a waste of time and resources. One left side of slide there is an image of a page from a Book of Hours with shepherds gazing up at an angel. There is text overlaying the picture that says Hark! The herald angels sing, no, we can't digitize everything! Happy Holidays from Derangement and Description.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx2.PNG) "Slide Two"
 
-~~~
+
 Digitization is not always equivalent to access. Many obstacles exist when trying to make digitized materials accessible.
 
 * [Bit rot] : *the inability to access digital data because the file format is obsolete and compatible applications no longer exist to read it*
 
 
 [Bit rot]: https://www.pcmag.com/encyclopedia/term/67563/bit-rot
-~~~
+
 
 ![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx3.PNG) "Slide Three"
 
-~~~
-This is how I will format image reader text. Use under every image.
-~~~
+
+
 
 ![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx4.PNG) "Slide Four"
 
-~~~
-This is how I will format image reader text. Use under every image.
-~~~
 
 ![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx5.PNG) "Slide Five"
 
-~~~
-This is how I will format image reader text. Use under every image.
-~~~
+
 
