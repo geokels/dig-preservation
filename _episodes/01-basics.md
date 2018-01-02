@@ -34,13 +34,24 @@ The three keys to creating long-term access to digital objects are:
 *	Curating
 *	Maintaining discoverability
 
-*Preservation is a means to provide access for future generations* 
+**Preservation is a means to provide access for future generations** 
 
-Primary obstacles to the preservation of digital materials:
+Obstacles to the preservation of digital objects:
 *	Degradation of object carrier *e.g. vinegar syndrome in microfiche, time and storage conditions affecting hard drives*
 *	Restoring to "original" vs. conserving to prevent deterioration *e.g. "correcting" images of physical objects*
 *	Format obsoletion *e.g. floppy discs*
 *	HTTP Error 404 : Web page not found *e.g. webpages are not constant, URL's are not stable points of access*
+
+Obstacles to curating digital objects:
+* Lack of provenance (e.g. lack of preservation metadata, "no one knows where this harddrive came from", etc.)
+* Lack of organization (e.g. born-digital objects have not been organized into collections or been given collection-level metadata, files have only non-specific file names, objects of the same collection were not digitized in the correct order or together, etc.)
+* Lack of description (non-descript file names, no preservation or descriptive metadata attached to objects, "no one knows where this floppy disk came from or what's on it", etc.)
+
+Obstacles to maintaining digital object discoverability:
+* Broken URL's
+* Lack of description (i.e. descriptive metadata)
+* Lack of organization (e.g. file structures, databases, etc.)
+* Lack of accessibility (e.g. lack of access metadata, local copy only, paywall, IP-restricted access, ADA non-compliance, etc.)
 
 
 
