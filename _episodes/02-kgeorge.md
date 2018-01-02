@@ -16,6 +16,10 @@ keypoints:
 #### Cataloging and Metadata Strategies Librarian 
 (as of February 2018)
 
+[![Digital Data by Randall Munroe, https://xkcd.com/1683/](../fig/kdg_ppx1.png)](https://xkcd.com/)
+
+*Digital Data* by Randall Munroe, <https://xkcd.com/>
+
 When we use Git on a new computer for the first time,
 we need to configure a few things. Below are a few examples
 of configurations we will set as we get started with Git:
