@@ -87,7 +87,7 @@ Questions to ask the library:
 ..* If there isn't a task force or committee, **MAKE SOME NOISE** 
 * What is your library's digital preservation policy?
 ..* If there isn't one, is there a library-wide committee or taskforce working to address issues of digital preservation and data management? 
-..* No? **Make some noise!** 
+..* No? **MAKE SOME NOISE!** 
 
 Gather your colleagues, go to the head of digital collections, form a plan, and bring it up the channel. Propose something. Make it campus wide. The library may be unaware, or just may not have the support or funding to make it happen on its own. Adding student, faculty, and researcher voices to the issue and bringing a unified plan to the administration will only help make it happen.
 
@@ -126,5 +126,5 @@ Links to the organizations (national and international) depicted on the slide, t
 [Samvera *previously known as Hydra*]: http://samvera.org/
 [Preservica]: https://preservica.com/
 
-[Resources]: https://geokels.github.io/dig-preservation/07-resources/
+[Resources]: https://geokels.github.io/dig-preservation/08-resources/
 
