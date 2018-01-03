@@ -40,14 +40,27 @@ The Getty published a [post] in *The Iris* in 2014 describing how they act to pr
 [Generation loss]: https://en.wikipedia.org/wiki/Generation_loss
 [post]: http://blogs.getty.edu/iris/preventing-digital-decay/
 
-In order for digital objects to be preserved long-term, digital object storage and access to the objects cannot remain static as technologies change.
-
-![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx3.PNG) "**Slide Three**"
+In order for digital objects to be preserved long-term, digital object storage and access to the objects **cannot** remain static as technologies change.
 
 
 
+![Image of third power point slide. Image in center of the slide is the distracted boyfriend meme, where a woman is walking and a man, holding another woman's hand, is checking her out while the other woman (presumed to be his girlfirend) stares up at him in disgust. The caption on the walking woman reads "digitization", on the man reads "funders", and on the disgusted girlfriend reads "digital perservation".](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx3.PNG) "**Slide Three**" (https://derangementanddescription.wordpress.com/2017/08/31/distracted-and-description/distracted_boyfriend_digitization/)
 
-![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx4.PNG) "**Slide Four**"
+In library-land, particularly in American academic libraries, budgets for libraries have been reduced or have stayed the same for years while the cost of provided electronic access to journals and other materials has increased. The desire to innovate and stay on top of digital trends is there, but many times the funding does not match the motivation. Often, donors will donate collections or donate funding on the condition that materials be digitized, but donors may not always have an understanding of or desire to fund the infrastructure required to make their collections available online long-term. 
+
+In addition to digitization costs, other factors to consider include:
+* Copyright issues
+* Whether materials will be preserved in a separate preservation repository
+* What level of access will be granted to the collection
+* Development of access, preservation, and descriptive metadata
+* Personnel available
+* Storage space and cost (for both digital and physical materials)
+* Preservation costs (for both digital and physical materials)
+
+Libraries without digital preservation policies and infrastructure have the option of accepting donations and then seeking out additional donors/university support, or they have to turn away collections due to a lack of resources. Ideally, libraries should already be connecting with internal (campus) and external (community) stakeholders to get support to preserve collections held in the library.
+
+
+![Image of fourth power point slide. Image in center of the slide is a relief panel of the great Ludovisi sarcophagus, depicting a carved battle scene. Text at the top of the slide reads "Battle over the institutional repository"](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx4.PNG) "**Slide Four**"
 
 
 ![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx5.PNG) "**Slide Five**"
