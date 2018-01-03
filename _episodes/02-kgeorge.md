@@ -19,7 +19,7 @@ keypoints:
 
 ![Image of first power point slide. Text on slide reads Cultivating a culture of digital preservation inside academic libraries and out, a presentation given by Kelsey George, Cataloging and Metadata Strategies Librarian. URL to github DOT com slash geokels included. On left side of slide there is a comic of a woman at a computer talking to a man holding a coffee cup. The text of the comic says I liked it before big data and metadata when we just had good old regular data.](../fig/kdg_ppx1.PNG) "**Introduction Slide**"
 
-![Image of second power point slide. Text on slide reads: Digitization does not equal access. Digitization does not equal preservation. Digitization without a long term storage and preservation plan is a waste of time and resources. One left side of slide there is an image of a page from a Book of Hours with shepherds gazing up at an angel. There is text overlaying the picture that says Hark! The herald angels sing, no, we can't digitize everything! Happy Holidays from Derangement and Description.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx2.PNG) "**Slide Two**"
+![Image of second power point slide. Text on slide reads: Digitization does not equal access. Digitization does not equal preservation. Digitization without a long term storage and preservation plan is a waste of time and resources. One left side of slide there is an image of a page from a Book of Hours with shepherds gazing up at an angel. There is text overlaying the picture that says Hark! The herald angels sing, no, we can't digitize everything! Happy Holidays from Derangement and Description.](../fig/kdg_ppx2.PNG) "**Slide Two**"
 
 Digitization is not always equivalent to access. 
 Many obstacles exist when trying to make digitized materials accessible.
@@ -44,7 +44,7 @@ In order for digital objects to be preserved long-term, digital object storage a
 
 
 
-![Image of third power point slide. Image in center of the slide is the distracted boyfriend meme, where a woman is walking and a man, holding another woman's hand, is checking her out while the other woman (presumed to be his girlfirend) stares up at him in disgust. The caption on the walking woman reads "digitization", on the man reads "funders", and on the disgusted girlfriend reads "digital perservation".](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx3.PNG) "**Slide Three**" (https://derangementanddescription.wordpress.com/2017/08/31/distracted-and-description/distracted_boyfriend_digitization/)
+![Image of third power point slide. Image in center of the slide is the distracted boyfriend meme, where a woman is walking and a man, holding another woman's hand, is checking her out while the other woman (presumed to be his girlfirend) stares up at him in disgust. The caption on the walking woman reads "digitization", on the man reads "funders", and on the disgusted girlfriend reads "digital perservation".](../fig/kdg_ppx3.PNG) "**Slide Three**" (https://derangementanddescription.wordpress.com/2017/08/31/distracted-and-description/distracted_boyfriend_digitization/)
 
 In library-land, particularly in American academic libraries, budgets for libraries have been reduced or have stayed the same for years while the newer expense of providing electronic access to journals and other materials has increased. The desire to innovate and stay on top of digital trends is part of the backbone of modern librarianship, but many times the funding does not match the motivation. Often, donors will donate collections or donate funding on the condition that materials be digitized, but donors may not always have an understanding of or desire to fund the infrastructure required to make their collections available online long-term. 
 
@@ -60,7 +60,7 @@ In addition to digitization costs, other factors to consider include:
 Libraries without digital preservation policies and infrastructure have the option of accepting donations and then seeking out additional donors/university support, or they have to turn away collections due to a lack of resources. Ideally, libraries should already be connecting with internal (campus) and external (community) stakeholders to get support to preserve collections held in the library, but this isn't always the case.
 
 
-![Image of fourth power point slide. Image in center of the slide is a relief panel of the great Ludovisi sarcophagus, depicting a carved battle scene. Text at the top of the slide reads "Battle over the institutional repository"](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx4.PNG) "**Slide Four**"
+![Image of fourth power point slide. Image in center of the slide is a relief panel of the great Ludovisi sarcophagus, depicting a carved battle scene. Text at the top of the slide reads "Battle over the institutional repository"](../fig/kdg_ppx4.PNG) "**Slide Four**"
 
 An institutional repository can sometimes be confused for a digital repository. 
 
@@ -76,7 +76,7 @@ Libraries are becoming more and more aware of the need for long-term digital pre
 
 ### So what can you do as researchers, students, and faculty to cultivate a culture of digital preservation at your institution?
 
-![Image of fifth power point slide. Slide text reads "join or create a committee". Image above text depicts a bunch of cartoon creatures, including Mickey Mouse and Sonic the Hedgehog, holding hands and perfoming some sort of Satanic ritual on top of a pentagram that has been painted on the floor.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx5.PNG) "**Slide Five**"
+![Image of fifth power point slide. Slide text reads "join or create a committee". Image above text depicts a bunch of cartoon creatures, including Mickey Mouse and Sonic the Hedgehog, holding hands and perfoming some sort of Satanic ritual on top of a pentagram that has been painted on the floor.](../fig/kdg_ppx5.PNG) "**Slide Five**"
 
 ### Be part of the conversation
 
@@ -93,7 +93,7 @@ Gather your colleagues, go to the head of digital collections, form a plan, and 
 
 WARNING: You may have to join/create a campus-wide committee or taskforce. I'm sorry. That's just how it is going to get done.
 
-![Image of sixth power point slide. Slide text reads "some organizations addressing digital preservation standards and tools". Image above text has logos for the Library of Congress, Digital Preservation Coalition, the Digital Preservation Network, Internet Archive, POWRR, Academic Preservation Trust, Chronopolis, Samvera, and Preservica.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx6.PNG) "**Slide Six**"
+![Image of sixth power point slide. Slide text reads "some organizations addressing digital preservation standards and tools". Image above text has logos for the Library of Congress, Digital Preservation Coalition, the Digital Preservation Network, Internet Archive, POWRR, Academic Preservation Trust, Chronopolis, Samvera, and Preservica.](../fig/kdg_ppx6.PNG) "**Slide Six**"
 
 ### What else can you do?
 
