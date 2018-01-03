@@ -3,17 +3,12 @@ title: We have it, now what do we DO with it? A multiplicity of institutional, o
 teaching: 5
 exercises: 0
 questions:
-- "Insert question in these quotes"
-- "Insert question in these quotes"
-- "Insert question in these quotes"
-objectives:
-- "Insert objective in these quotes"
-- "Insert objective in these quotes"
-- "Insert objective in these quotes"
-- "Insert objective in these quotes"
+- "How do long-running projects deal with analog and born digital content?"
+- "Can we depend on institutional and third-party repositories?"
+- "Do we pass the bus test/are our workflows codified?"
 keypoints:
-- "Insert keypoint in these quotes"
-- "Insert keypoint in these quotes"
+- "At the moment, a multiplicity of approaches is best."
+- "Be proactive!"
 ---
 
 ### Theresa Huntsman
@@ -21,5 +16,4 @@ keypoints:
 #### Publications Data Manager, Sardis Expedition
 
 
-
-Insert any relevant presentation material here.
+Check us out at http://www.sardisexpedition.org!
