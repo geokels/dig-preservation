@@ -79,28 +79,34 @@ Libraries are becoming more and more aware of the need for long-term digital pre
 [institutional repository]: http://www.newworldencyclopedia.org/entry/Institutional_repository
 [Digital repositories or libraries]: http://www.newworldencyclopedia.org/entry/Digital_library
 
+
+
 ![Image of fifth power point slide. Slide text reads "join or create a committee". Image above text depicts a bunch of cartoon creatures, including Mickey Mouse and Sonic the Hedgehog, holding hands and perfoming some sort of Satanic ritual on top of a pentagram that has been painted on the floor.](../fig/kdg_ppx5.PNG) "**Slide Five**"
 
 ### Be part of the conversation
 
 Questions to ask the library:
 
-* Who is/are the person/people to talk to about digital preservation?
-    * If there isn't a person or group of people, is there a library-wide committee or taskforce working to address issues of digital preservation and data management?
-    * If there isn't a task force or committee, **MAKE SOME NOISE** 
+* Who do you talk to about digital preservation?
+    * If there isn't a specific person or group of people (i.e. a digital collections, special collections, digital archivists, data curation group, etc.), is there a library-wide committee or taskforce working to address issues of digital preservation and data management?
+    * If there isn't a task force or committee, **MAKE SOME NOISE!** 
 * What is your library's digital preservation policy?
     * If there isn't one, is there a library-wide committee or taskforce working to address issues of digital preservation and data management? 
-    * No? **MAKE SOME NOISE!** 
+    * No? **MAKE SOME NOISE!!!** 
 
-Gather your colleagues, go to the head of digital collections, form a plan, and bring it up the channel. Propose something. Make it campus wide. The library may be unaware, or just may not have the support or funding to make it happen on its own. Adding student, faculty, and researcher voices to the issue and bringing a unified plan to the administration will only help make it happen.
+Gather your colleagues, go to the head of digital collections, form a plan, and bring it up the channel. Propose something. Make it campus wide. The library may be unaware, or just may not have the support or funding to make it happen on its own. 
 
-WARNING: You may have to join/create a campus-wide committee or taskforce. I'm sorry. That's just how it is going to get done.
+Adding student, faculty, and researcher voices to the issue and bringing a unified plan to the administration *makes a significant difference*.
+
+*WARNING*: You may have to join/create a campus-wide committee or taskforce. I'm sorry. That's just how it is going to get done.
+
+
 
 ![Image of sixth power point slide. Slide text reads "some organizations addressing digital preservation standards and tools". Image above text has logos for the Library of Congress, Digital Preservation Coalition, the Digital Preservation Network, Internet Archive, POWRR, Academic Preservation Trust, Chronopolis, Samvera, and Preservica.](../fig/kdg_ppx6.PNG) "**Slide Six**"
 
 ### What else can you do?
 
-I won’t talk too much about this in this presentation but create metadata. Embed your datasets with preservation metadata (see PREMIS for a guide), version control your research, provide as much context to your work as possible through documentation. Data without context or provenance is as decipherable as the Etruscan language. There are many organizations that are currently working to solve the problems presented by digital preservation who have developed standards and tools. I highly recommend looking at the Digital Preservation Coalition’s Handbook, the Digital Preservation Tool Spreadsheet developed by POWRR, and the National Digital Stewardship Alliance’s [Levels of Digital Preservation].
+I won’t talk too much about this in this presentation but create metadata. Embed your datasets with preservation metadata (see PREMIS for a guide), version control your research, provide as much context to your work as possible through documentation. Data without context or provenance is as decipherable as the Etruscan language. There are many organizations that are currently working to solve the problems presented by digital preservation who have developed standards and tools. I highly recommend looking at the Digital Preservation Coalition’s [Handbook], the [OAIS Community], the Digital Preservation [Tool Grid] developed by POWRR, and the National Digital Stewardship Alliance’s [Levels of Digital Preservation].
 
 
 Links to the organizations (national and international) with logos depicted on the slide (list is not exhaustive):
@@ -119,6 +125,9 @@ Links to the organizations (national and international) with logos depicted on t
 ### Additional resources can be found in the [Resources] tab of this site.
 #### A .pdf version of this presentation can be downloaded [here].
 
+[Tool Grid]: http://digitalpowrr.niu.edu/digital-preservation-101/tool-grid/
+[OAIS Community]: http://wiki.dpconline.org/index.php?title=OAIS_Community
+[Handbook]: http://dpconline.org/handbook
 [Levels of Digital Preservation]: http://ndsa.org/activities/levels-of-digital-preservation/
 [Library of Congress' *Digital Preservation Program*]: http://www.digitalpreservation.gov/
 [Digital Preservation Coalition]: http://www.dpconline.org/
