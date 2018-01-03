@@ -35,9 +35,15 @@ keypoints:
 
 #### Version Control
 
-*	[Git] *Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people*
+*	[Git] *Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. Can be used in Command Line or a GUI*
+* [Github Desktop] *Git Graphical User Interface specifically designed for interconnectivity with Github, for Windows and Mac*
+* [Git Kraken] *Git Graphical User Interface for Windows, Mac and Linux*
+* [Fork] *Git Graphical User Interface for Mac*
 
 [Git]: https://git-scm.com/
+[Github Desktop]: https://desktop.github.com/
+[Git Kraken]: https://www.gitkraken.com/
+[Fork]: https://git-fork.com/
 
 #### Data Cleanup
 
