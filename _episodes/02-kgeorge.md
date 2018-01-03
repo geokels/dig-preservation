@@ -78,7 +78,7 @@ Libraries are becoming more and more aware of the need for long-term digital pre
 
 ![Image of fifth power point slide. Slide text reads "join or create a committee". Image above text depicts a bunch of cartoon creatures, including Mickey Mouse and Sonic the Hedgehog, holding hands and perfoming some sort of Satanic ritual on top of a pentagram that has been painted on the floor.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx5.PNG) "**Slide Five**"
 
-## Be part of the conversation
+### Be part of the conversation
 
 Questions to ask the library:
 
@@ -95,7 +95,7 @@ WARNING: You may have to join/create a campus-wide committee or taskforce. I'm s
 
 ![Image of sixth power point slide. Slide text reads "some organizations addressing digital preservation standards and tools". Image above text has logos for the Library of Congress, Digital Preservation Coalition, the Digital Preservation Network, Internet Archive, POWRR, Academic Preservation Trust, Chronopolis, Samvera, and Preservica.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx6.PNG) "**Slide Six**"
 
-## What else can you do?
+### What else can you do?
 
 I won’t talk too much about this in this presentation but create metadata. Embed your datasets with preservation metadata (see PREMIS for a guide), version control your research, provide as much context to your work as possible through documentation. Data without context or provenance is as decipherable as the Etruscan language. There are many organizations that are currently working to solve the problems presented by digital preservation who have developed standards and tools. I highly recommend looking at the Digital Preservation Coalition’s Handbook, the Digital Preservation Tool Spreadsheet developed by POWRR, and the National Digital Stewardship Alliance’s [Levels of Digital Preservation].
 
