@@ -24,11 +24,23 @@ keypoints:
 Digitization is not always equivalent to access. 
 Many obstacles exist when trying to make digitized materials accessible.
 
-* [Bit rot] : *the inability to access digital data because the file format is obsolete and compatible applications no longer exist to read it*
+Digital file formats are susceptible to bit rot, file degradation, file corruption, and generation loss over time. 
 
+
+* [Bit rot] : *the inability to access digital data because the file format is obsolete and compatible applications no longer exist to read it*
+* [File or data degradation] : *the gradual corruption of computer data due to an accumulation of non-critical failures in a data storage device*
+* [File corruption] : *corruption to data or program file accidentally by hardware or software failure. It causes the bits to be rearranged and renders it either unreadable to the hardware or, if readable, indecipherable to the program.*
+* [Generation loss] : *loss of quality between subsequent copies or transcodes of data. Anything that reduces the quality of the representation when copying, and would cause further reduction in quality on making a copy of the copy, can be considered a form of generation loss.*
+
+The Getty published a [post] in *The Iris* in 2014 describing how they act to prevent digital decay. 
 
 [Bit rot]: https://www.pcmag.com/encyclopedia/term/67563/bit-rot
+[File or data degradation]: https://en.wikipedia.org/wiki/Data_degradation
+[File corruption]: http://www.yourdictionary.com/corrupted-file
+[Generation loss]: https://en.wikipedia.org/wiki/Generation_loss
+[post]: http://blogs.getty.edu/iris/preventing-digital-decay/
 
+In order for digital objects to be preserved long-term, digital object storage and access to the objects cannot remain static as technologies change.
 
 ![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx3.PNG) "**Slide Three**"
 
