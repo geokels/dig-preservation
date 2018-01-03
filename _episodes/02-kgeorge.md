@@ -17,7 +17,7 @@ keypoints:
 (as of February 2018)
 
 
-![alt text](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx1.PNG) "**Introduction Slide**"
+![Image of first power point slide. Text on slide reads Cultivating a culture of digital preservation inside academic libraries and out, a presentation given by Kelsey George, Cataloging and Metadata Strategies Librarian. URL to github DOT com slash geokels included. On left side of slide there is a comic of a woman at a computer talking to a man holding a coffee cup. The text of the comic says I liked it before big data and metadata when we just had good old regular data.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx1.PNG) "**Introduction Slide**"
 
 ![Image of second power point slide. Text on slide reads: Digitization does not equal access. Digitization does not equal preservation. Digitization without a long term storage and preservation plan is a waste of time and resources. One left side of slide there is an image of a page from a Book of Hours with shepherds gazing up at an angel. There is text overlaying the picture that says Hark! The herald angels sing, no, we can't digitize everything! Happy Holidays from Derangement and Description.](https://github.com/geokels/dig-preservation/blob/gh-pages/fig/kdg_ppx2.PNG) "**Slide Two**"
 
