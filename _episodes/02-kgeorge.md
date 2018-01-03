@@ -64,17 +64,20 @@ Libraries without digital preservation policies and infrastructure have the opti
 
 An institutional repository can sometimes be confused for a digital repository. 
 
-An **institutional repository** is an *archive for collecting, preserving, and disseminating digital copies of the intellectual output of an institution, particularly a research institution. 
+An **[institutional repository]** is an *archive for collecting, preserving, and disseminating digital copies of the intellectual output of an institution, particularly a research institution. 
 
-**Digital repositories** are *mechanisms for managing and storing digital content*. 
+**[Digital repositories or libraries]** are *collections stored in digital formats (as opposed to print, microform, or other media) and accessible by computers. The digital content may be stored locally, or accessed remotely via computer networks. A digital library is a type of information retrieval system.*
 
-Digital repositories are not equivalent to integrated library systems, which are used to index and manage the library’s physical objects and usually also index access points for e-resources and journals. These days, most institutions have some form of digital repository—whether it is for internal use only or is accessible online for external use. Not nearly as many have institutional repositories. 
+Digital repositories are not equivalent to integrated library systems, which are used to index and manage the library’s holdings of physical objects for bibliographic titles and usually also index access points for e-resources and journals. These days, most institutions have some form of digital repository—whether it is for internal use only or is accessible online for external use. Not nearly as many have institutional repositories. 
 
 Yet research institutions generate lots of and many different types of data, and that data need to be housed somewhere. At some institutions, research data live in departmental silos, with storage and preservation supported by campus IT. At other institutions, data management is being handled by the library. Even more often, no campus or deparment-wide data storage systems exist and researchers push for the library to house their data and the library may have to refuse the donation, due to a lack of resources/personnel and the complexity of housing and preserving said data described in the previous slide. This leaves labs and grant-funded projects with no campus support when it comes to meeting data management and publishing requirements for their resources.
 
 Libraries are becoming more and more aware of the need for long-term digital preservation and data management infrastructures to be put in place and policies to be established. Some libraries are trying to meet this need by hiring a Digital Preservation Librarian to work on these issues and collaborate across campus. There were only approximately ten librarian jobs with this title posted in the last two years. Other libraries are hiring Digital Collections Librarians or Data Curators, which may perform overlapping functions with regard to digital preservation, but focus more on digital repository needs and campus research data management respectively. If academic libraries do have a digital preservation policy in place, it may be outdated.
 
 ### So what can you do as researchers, students, and faculty to cultivate a culture of digital preservation at your institution?
+
+[institutional repository]: http://www.newworldencyclopedia.org/entry/Institutional_repository
+[Digital repositories or libraries]: http://www.newworldencyclopedia.org/entry/Digital_library
 
 ![Image of fifth power point slide. Slide text reads "join or create a committee". Image above text depicts a bunch of cartoon creatures, including Mickey Mouse and Sonic the Hedgehog, holding hands and perfoming some sort of Satanic ritual on top of a pentagram that has been painted on the floor.](../fig/kdg_ppx5.PNG) "**Slide Five**"
 
@@ -100,7 +103,7 @@ WARNING: You may have to join/create a campus-wide committee or taskforce. I'm s
 I won’t talk too much about this in this presentation but create metadata. Embed your datasets with preservation metadata (see PREMIS for a guide), version control your research, provide as much context to your work as possible through documentation. Data without context or provenance is as decipherable as the Etruscan language. There are many organizations that are currently working to solve the problems presented by digital preservation who have developed standards and tools. I highly recommend looking at the Digital Preservation Coalition’s Handbook, the Digital Preservation Tool Spreadsheet developed by POWRR, and the National Digital Stewardship Alliance’s [Levels of Digital Preservation].
 
 
-Links to the organizations (national and international) depicted on the slide, this list is not exhaustive.
+Links to the organizations (national and international) with logos depicted on the slide (list is not exhaustive):
 
 * [Library of Congress' *Digital Preservation Program*]
 * [Digital Preservation Coalition]
