@@ -83,11 +83,11 @@ Libraries are becoming more and more aware of the need for long-term digital pre
 Questions to ask the library:
 
 * Who is/are the person/people to talk to about digital preservation?
-..* If there isn't a person or group of people, is there a library-wide committee or taskforce working to address issues of digital preservation and data management?
-..* If there isn't a task force or committee, **MAKE SOME NOISE** 
+    * If there isn't a person or group of people, is there a library-wide committee or taskforce working to address issues of digital preservation and data management?
+    * If there isn't a task force or committee, **MAKE SOME NOISE** 
 * What is your library's digital preservation policy?
-..* If there isn't one, is there a library-wide committee or taskforce working to address issues of digital preservation and data management? 
-..* No? **MAKE SOME NOISE!** 
+    * If there isn't one, is there a library-wide committee or taskforce working to address issues of digital preservation and data management? 
+    * No? **MAKE SOME NOISE!** 
 
 Gather your colleagues, go to the head of digital collections, form a plan, and bring it up the channel. Propose something. Make it campus wide. The library may be unaware, or just may not have the support or funding to make it happen on its own. Adding student, faculty, and researcher voices to the issue and bringing a unified plan to the administration will only help make it happen.
 
@@ -114,6 +114,7 @@ Links to the organizations (national and international) depicted on the slide, t
 
 
 ### Additional resources can be found in the [Resources] tab of this site.
+#### A .pdf version of this presentation can be downloaded [here].
 
 [Levels of Digital Preservation]: http://ndsa.org/activities/levels-of-digital-preservation/
 [Library of Congress' *Digital Preservation Program*]: http://www.digitalpreservation.gov/
@@ -127,4 +128,5 @@ Links to the organizations (national and international) depicted on the slide, t
 [Preservica]: https://preservica.com/
 
 [Resources]: https://geokels.github.io/dig-preservation/08-resources/
+[here]: https://github.com/geokels/dig-preservation/blob/gh-pages/fig/Cultivating%20a%20Culture%20of%20Digital%20Preservation.pdf
 
