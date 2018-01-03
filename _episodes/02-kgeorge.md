@@ -8,7 +8,7 @@ objectives:
 - "Understand the current culture of digital preservation."
 - "Understand the difference between digital collections and institutional repositories."
 keypoints:
--   "Faculty are a key component of the users that academic libraries serve and have power to influence the University administration's decision to support library services."
+-   "Faculty, students, and researchers are a key component of the users that academic libraries serve and have power to influence the University administration's decision to support library services."
 ---
 
 ### Kelsey George
