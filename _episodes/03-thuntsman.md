@@ -27,13 +27,13 @@ Check us out at http://www.sardisexpedition.org!
 
 ![Image of fourth power point slide.](../fig/trh_ppx4.PNG) "**Fourth Slide**"
 
-![Image of fifth power point slide.](../fig/trh_ppx1.PNG) "**Fifth Slide**"
+![Image of fifth power point slide.](../fig/trh_ppx5.PNG) "**Fifth Slide**"
 
-![Image of sixth power point slide.](../fig/trh_ppx1.PNG) "**Sixth Slide**"
+![Image of sixth power point slide.](../fig/trh_ppx6.PNG) "**Sixth Slide**"
 
-![Image of seventh power point slide.](../fig/trh_ppx1.PNG) "**Seventh Slide**"
+![Image of seventh power point slide.](../fig/trh_ppx7.PNG) "**Seventh Slide**"
 
-![Image of eigth power point slide.](../fig/trh_ppx1.PNG) "**Eighth Slide**"
+![Image of eigth power point slide.](../fig/trh_ppx8.PNG) "**Eighth Slide**"
 
 ### Additional resources can be found in the [Resources] tab of this site.
 #### A .pdf version of this presentation can be downloaded [here].
