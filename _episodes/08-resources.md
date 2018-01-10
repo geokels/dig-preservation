@@ -25,6 +25,7 @@ keypoints:
 * [Digital Data Management for a New Generation] *These materials are geared toward early training in best practices. Such practices ultimately support long-term management—including upload into digital data archives and institutional repositories—and facilitate data sharing where appropriate. Hosted by the American Anthropological Association.*
 * [Facing Off with Digital Preservation Policy] *A crosswalk between digital preservation policies of thirteen diverse institutions, developed by Kristin Snawder, a 2011 Junior Fellow working with NDIIPP*
 * [Archaeology Data Service / Digital Antiquity Guide to Good Practice] *A guide providing the basis for archaeological project workflows that will create digital datasets that can be archived and shared effectively by Digital Antiquity's tDAR archive and repository in the US and by the Archaeology Data Service in the UK*
+* [MetaArchive] *The mission of the MetaArchive Cooperative is to foster better understanding of distributed digital preservation methods and to create enduring and stable, geographically dispersed “dark archives” of digital materials that can, if necessary, be drawn upon to restore collections at Member organizations.*
 
 [POWRR]: http://digitalpowrr.niu.edu/
 [Digital Preservation in a Box]: http://digitalpowrr.niu.edu/digital-preservation-101/
@@ -34,6 +35,7 @@ keypoints:
 [Digital Data Management for a New Generation]: http://www.americananthro.org/LearnAndTeach/Landing.aspx?ItemNumber=20641&navItemNumber=20708
 [Facing Off with Digital Preservation Policy]: https://blogs.loc.gov/thesignal/2011/07/facing-off-with-digital-preservation-policy/
 [Archaeology Data Service / Digital Antiquity Guide to Good Practice]: http://guides.archaeologydataservice.ac.uk/g2gp/
+[MetaArchive]: https://metaarchive.org/how-ddp-works/
 
 #### Version Control
 
