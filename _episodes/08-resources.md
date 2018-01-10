@@ -26,6 +26,7 @@ keypoints:
 * [Facing Off with Digital Preservation Policy] *A crosswalk between digital preservation policies of thirteen diverse institutions, developed by Kristin Snawder, a 2011 Junior Fellow working with NDIIPP*
 * [Archaeology Data Service / Digital Antiquity Guide to Good Practice] *A guide providing the basis for archaeological project workflows that will create digital datasets that can be archived and shared effectively by Digital Antiquity's tDAR archive and repository in the US and by the Archaeology Data Service in the UK*
 * [MetaArchive] *The mission of the MetaArchive Cooperative is to foster better understanding of distributed digital preservation methods and to create enduring and stable, geographically dispersed “dark archives” of digital materials that can, if necessary, be drawn upon to restore collections at Member organizations.*
+* [Beyond the Repository: Integrating Local Preservation Systems with National Distribution Services] *The “Beyond the Repository” planning grant investigated how local digital preservation practices and repository systems interoperate with distributed digital preservation (DDP) services. The grant team conducted a survey followed by in-depth interviews with selected survey respondents. The survey and interviews revealed both great diversity in how digital preservation is practiced and common challenges in the intersection of local repositories and DDP services.*
 
 [POWRR]: http://digitalpowrr.niu.edu/
 [Digital Preservation in a Box]: http://digitalpowrr.niu.edu/digital-preservation-101/
@@ -36,6 +37,7 @@ keypoints:
 [Facing Off with Digital Preservation Policy]: https://blogs.loc.gov/thesignal/2011/07/facing-off-with-digital-preservation-policy/
 [Archaeology Data Service / Digital Antiquity Guide to Good Practice]: http://guides.archaeologydataservice.ac.uk/g2gp/
 [MetaArchive]: https://metaarchive.org/how-ddp-works/
+[Beyond the Repository: Integrating Local Preservation Systems with National Distribution Services]: https://arch.library.northwestern.edu/downloads/pk02c984x?locale=en
 
 #### Version Control
 
